@@ -47,11 +47,11 @@
           <a class="ai-dropdown-item" href="pulse.html">
             <span class="left"><span class="ai-dot pulse"></span> Pulse</span><span class="arrow">→</span>
           </a>
-          <a class="ai-dropdown-item" href="ai-studio.html">
-            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span><span class="arrow">→</span>
-          </a>
           <a class="ai-dropdown-item" href="cohesionx.html">
             <span class="left"><span class="ai-dot cohesionx"></span> CohesionX</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="ai-studio.html">
+            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span><span class="arrow">→</span>
           </a>
         </div>
       </li>
@@ -65,23 +65,36 @@
   </div>
 </header>
 
+<!-- ============ AI SWITCHER ============ -->
+<div class="ai-switcher">
+  <div class="container">
+    <span class="ai-switcher-label">Optimum AI Suite:</span>
+    <a href="forge.html" class="ai-switcher-pill forge active">Forge</a>
+    <a href="pulse.html" class="ai-switcher-pill pulse">Pulse</a>
+    <a href="cohesionx.html" class="ai-switcher-pill cohesionx">CohesionX</a>
+    <a href="ai-studio.html" class="ai-switcher-pill aistudio">AI Studio</a>
+  </div>
+</div>
+
 <!-- ============ HERO ============ -->
 <section class="product-hero theme-forge">
   <div class="container">
     <div class="product-hero-grid">
       <div>
-        <span class="product-badge">AI Product</span>
+        <img src="images/forge.png" alt="Forge logo" class="product-logo">
         <h1>Forge</h1>
-        <p class="subtitle">Enterprise Agentic SDLC Platform</p>
+        <p class="subtitle">Agentic Software Engineering</p>
         <div class="brand-divider"><span class="dot"></span></div>
-        <p class="lede">From Requirements to Production. One Platform. One Orchestrated AI Workforce. Accelerate software engineering through a coordinated team of specialised AI agents spanning requirements, architecture, development, testing, deployment and operations — with engineers in control.</p>
+        <p class="lede">Specialist AI agents working with shared project context, structured skills and human control. Forge brings human engineers and specialist AI agents into one project environment — coordinated across requirements, architecture, development, review, QA and release.</p>
         <div class="actions">
           <a href="#" class="btn btn-primary">Download / Get Started</a>
           <a href="#in-depth" class="btn btn-outline-white">Read Documentation</a>
         </div>
       </div>
 
-      <!-- Live demo panel -->
+      <!-- Live demo panel: laptop/browser chrome, personalised to Forge — a request
+           moving across the 6 specialist roles with a human-approval gate, plus a
+           live commit-style log of what each role is doing. -->
       <div class="demo-window">
         <div class="demo-titlebar">
           <span class="demo-dot red"></span><span class="demo-dot yellow"></span><span class="demo-dot green"></span>
@@ -89,31 +102,36 @@
           <span class="demo-live-dot" title="Live"></span>
         </div>
         <div class="demo-body">
-          <div class="demo-panel">
-            <div class="demo-skeleton-line w-70"></div>
-            <div class="demo-skeleton-line w-45"></div>
-            <div class="demo-skeleton-line accent"></div>
-            <div class="demo-skeleton-line w-85"></div>
-            <div class="demo-skeleton-line w-45"></div>
-            <div class="demo-icons-row">
-              <div class="demo-icon-block" data-demo-icon></div>
-              <div class="demo-icon-block" data-demo-icon></div>
-              <div class="demo-icon-block" data-demo-icon></div>
-              <div class="demo-icon-block" data-demo-icon></div>
+          <div class="demo-panel pipeline-panel">
+            <div class="pipeline-request">Request: <b>&ldquo;Add SSO login to customer portal&rdquo;</b></div>
+            <div class="pipeline-track" data-pipeline data-gate-index="3">
+              <div class="pipeline-line"></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></span><span class="node-label">BA</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span><span class="node-label">Architect</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span><span class="node-label">Developer</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="node-label">Reviewer</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><span class="node-label">QA</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></span><span class="node-label">Release</span></div>
+              <div class="pipeline-ticket" data-ticket></div>
+            </div>
+            <div class="pipeline-gate-note" data-gate-note>⏸ Human approval required before merge</div>
+            <div class="demo-metric-tiles">
+              <div class="demo-metric-tile"><b data-count-to="6">0</b><span>Specialist roles</span></div>
+              <div class="demo-metric-tile"><b data-count-to="3">0</b><span>Human checkpoints</span></div>
             </div>
           </div>
           <div class="demo-panel">
-            <div class="demo-log" data-demo-log></div>
-            <div class="demo-metrics">
-              <div class="demo-metric">
-                <div class="label">Processing <b>—</b></div>
-                <div class="bar" data-demo-bar data-min="30" data-max="90"><span style="width:0%"></span></div>
-              </div>
-              <div class="demo-metric">
-                <div class="label">Accuracy <b>—</b></div>
-                <div class="bar" data-demo-bar data-min="75" data-max="97"><span style="width:0%"></span></div>
-              </div>
-            </div>
+            <div class="demo-log" data-demo-log='[
+              "Requirement received: \"Add SSO login\"",
+              "[Business Analyst] Drafting user story + acceptance criteria",
+              "[Architect] Proposing solution design",
+              "[Developer] Implementing change",
+              "[Code Reviewer] Checking standards, security & maintainability",
+              "Human approval required before merge",
+              "[QA] Running delivery-level validation checks",
+              "[Release] Preparing deployment",
+              "✓ Released — human-approved"
+            ]'></div>
           </div>
         </div>
       </div>
@@ -121,6 +139,16 @@
   </div>
 </section>
 
+<!-- ============ SECTION BOOKMARKS ============ -->
+<nav class="page-tabs" data-page-tabs>
+  <div class="container">
+    <a class="page-tab" href="#overview">Overview</a>
+    <a class="page-tab" href="#capabilities">Capabilities</a>
+    <a class="page-tab" href="#tools">Tools</a>
+    <a class="page-tab" href="#case-studies">Case Studies</a>
+    <a class="page-tab" href="#faq">FAQ</a>
+  </div>
+</nav>
 <!-- ============ TRUSTED BY ============ -->
 <section class="trusted-strip">
   <div class="container">
@@ -137,38 +165,39 @@
 </section>
 
 <!-- ============ STANDOUT QUALITIES ============ -->
-<section class="standout-section">
+<section class="standout-section" id="overview">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Why Choose Us</span>
-      <h2>Standout Qualities</h2>
+      <h2>Specialist Agents. Shared Context. Human Control.</h2>
     </div>
     <div class="standout-grid">
       <div>
         <div class="standout-num">01</div>
-        <h3>Orchestrated, Not Isolated</h3>
-        <p>AI agents collaborate in context across the entire SDLC for complete outcomes — not siloed, disconnected tasks.</p>
+        <h3>Specialist Agents</h3>
+        <p>Roles aligned to software engineering responsibilities — Business Analyst, Architect, Developer, Code Reviewer, QA and Release — each with defined responsibilities and working instructions.</p>
       </div>
       <div>
         <div class="standout-num">02</div>
-        <h3>Governed & Trustworthy</h3>
-        <p>Human oversight, policies and guardrails at every step, with full auditability for regulators and stakeholders.</p>
+        <h3>Shared Project Context</h3>
+        <p>Every agent works from the same requirements, documents, repositories, standards and prior work — for consistent interpretation and continuity between specialists.</p>
       </div>
       <div>
         <div class="standout-num">03</div>
-        <h3>Outcome Driven</h3>
-        <p>Accelerate delivery cycles, improve quality and deliver measurable business value — not just individual tasks.</p>
+        <h3>Human Control</h3>
+        <p>Forge can pause a supported action and request an authorised decision — approve, redirect or reject — before work continues, with the request, response and outcome retained.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ WORKFLOW ============ -->
-<section class="workflow-section">
+<section class="workflow-section" id="capabilities">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">How It Works</span>
-      <h2>Workflow</h2>
+      <h2>One Engineering Request, Coordinated Across Specialist Roles</h2>
+      <p>Forge carries shared context through the work while the human engineering team reviews key decisions. Example: adding a new approval rule to an existing application.</p>
     </div>
 
     <div class="workflow-rows">
@@ -176,8 +205,8 @@
         <div class="workflow-text">
           <div class="step-num">1</div>
           <div>
-            <h4>Analyze & Plan</h4>
-            <p>Forge Analyst and Forge Architect capture and structure requirements from any source, then design scalable, secure solution architectures — generating BRDs, user stories, data models, API contracts and traceability matrices.</p>
+            <h4>Understand — Business Analyst + Architect</h4>
+            <p>Requirements are clarified, acceptance criteria set, and impact and solution design worked out. A human reviews requirements before work proceeds.</p>
           </div>
         </div>
         <div class="workflow-visual">
@@ -191,8 +220,8 @@
         <div class="workflow-text">
           <div class="step-num">2</div>
           <div>
-            <h4>Build</h4>
-            <p>Forge Developer works as a context-aware AI pair engineer — understanding the full codebase, generating idiomatic and secure code, refactoring, and writing tests alongside every change.</p>
+            <h4>Build & Review — Developer + Code Reviewer</h4>
+            <p>Proposed code changes, unit tests and review findings are prepared. A human approves the design and changes before they carry forward.</p>
           </div>
         </div>
         <div class="workflow-visual">
@@ -206,8 +235,8 @@
         <div class="workflow-text">
           <div class="step-num">3</div>
           <div>
-            <h4>Review & Test</h4>
-            <p>Forge Reviewer checks code for quality, security and standards while Forge Tester designs, automates and executes tests with full bi-directional traceability from requirement to defect.</p>
+            <h4>Validate & Release — QA + Release</h4>
+            <p>Validation evidence, a release checklist and deployment notes are prepared. A human authorises the release before it goes out.</p>
           </div>
         </div>
         <div class="workflow-visual">
@@ -216,32 +245,38 @@
           </div>
         </div>
       </div>
-
-      <div class="workflow-row">
-        <div class="workflow-text">
-          <div class="step-num">4</div>
-          <div>
-            <h4>Deploy & Operate</h4>
-            <p>Forge DevOps automates release and deployment with confidence, while Forge Operations monitors, resolves and continuously optimises the system in production — all under Forge Studio's governance.</p>
-          </div>
-        </div>
-        <div class="workflow-visual">
-          <div class="visual-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-          </div>
-        </div>
-      </div>
     </div>
+    <p style="text-align:center; max-width:640px; margin:36px auto 0; color:var(--gray-600); font-size:14px;">Each role works from the same project context. Decisions and artifacts carry forward.</p>
+  </div>
+</section>
+
+<!-- ============ SPECIALIST AGENTS ============ -->
+<section class="roles-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">The Agent Team</span>
+      <h2>Specialist Agents Contribute Different Engineering Expertise</h2>
+      <p>Each agent has defined responsibilities, skills and working instructions while contributing to the same shared project context.</p>
+    </div>
+    <div class="roles-grid">
+      <div class="indepth-card"><h4><span class="role-num">1</span> Business Analyst</h4><p>Requirements, user stories and acceptance criteria.</p></div>
+      <div class="indepth-card"><h4><span class="role-num">2</span> Architect</h4><p>Solution designs, interfaces and technical decisions.</p></div>
+      <div class="indepth-card"><h4><span class="role-num">3</span> Developer</h4><p>Code development, change and documentation.</p></div>
+      <div class="indepth-card"><h4><span class="role-num">4</span> Code Reviewer</h4><p>Standards, security and maintainability review.</p></div>
+      <div class="indepth-card"><h4><span class="role-num">5</span> QA</h4><p>Delivery-level validation and quality checks.</p></div>
+      <div class="indepth-card"><h4><span class="role-num">6</span> Release</h4><p>Release readiness and deployment support.</p></div>
+    </div>
+    <p style="text-align:center; max-width:680px; margin:32px auto 0; color:var(--gray-600); font-size:14px;">Teams can work directly with the specialist agent best suited to a task, or let the Forge Project Manager coordinate several agents when a change spans roles.</p>
   </div>
 </section>
 
 <!-- ============ INTEGRATIONS ============ -->
-<section class="integrations-section">
+<section class="integrations-section" id="tools">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">Integrations</span>
-      <h2>Move Freely Between Open and Closed Models</h2>
-      <p>Forge is model-agnostic and integrates natively with your enterprise toolchain and deployment environment of choice.</p>
+      <h2>Works With the Tools Already Used by Engineering Teams</h2>
+      <p>Connections are configured for each organisation's toolchain, access model and deployment environment.</p>
     </div>
     <div class="marquee-row">
       <div class="marquee-track">
@@ -259,14 +294,15 @@
       <div class="marquee-track reverse">
         <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=azure.microsoft.com" alt="Azure DevOps logo" onerror="this.style.display='none'"></span> Azure DevOps</div>
         <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonarsource.com" alt="SonarQube logo" onerror="this.style.display='none'"></span> SonarQube</div>
-        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=aws.amazon.com" alt="AWS logo" onerror="this.style.display='none'"></span> AWS</div>
-        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=openai.com" alt="OpenAI logo" onerror="this.style.display='none'"></span> OpenAI / Claude / Gemini</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonatype.com" alt="Nexus IQ logo" onerror="this.style.display='none'"></span> Nexus IQ</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=servicenow.com" alt="ServiceNow logo" onerror="this.style.display='none'"></span> ServiceNow</div>
         <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=azure.microsoft.com" alt="Azure DevOps logo" onerror="this.style.display='none'"></span> Azure DevOps</div>
         <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonarsource.com" alt="SonarQube logo" onerror="this.style.display='none'"></span> SonarQube</div>
-        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=aws.amazon.com" alt="AWS logo" onerror="this.style.display='none'"></span> AWS</div>
-        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=openai.com" alt="OpenAI logo" onerror="this.style.display='none'"></span> OpenAI / Claude / Gemini</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonatype.com" alt="Nexus IQ logo" onerror="this.style.display='none'"></span> Nexus IQ</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=servicenow.com" alt="ServiceNow logo" onerror="this.style.display='none'"></span> ServiceNow</div>
       </div>
     </div>
+    <p style="text-align:center; max-width:760px; margin:32px auto 0; color:var(--gray-600); font-size:14px;">Deployment choices: cloud, on-premises or hybrid · model and LLM agnostic · local or managed execution hosts · project-specific repository access.</p>
   </div>
 </section>
 
@@ -276,48 +312,57 @@
     <div class="section-head on-light" style="text-align:left; margin:0 0 40px;">
       <span class="eyebrow">In Depth</span>
       <h2>More About Forge</h2>
-      <p>Forge is more than an AI assistant — it's an AI Engineering System purpose-built to run the complete software engineering lifecycle.</p>
+      <p>Forge brings human engineers and specialist AI agents into one project environment, with the context, skills and controls needed to work as a coordinated team.</p>
     </div>
 
     <div class="indepth-grid">
       <div>
         <div class="indepth-card">
           <h4>Overview</h4>
-          <p>Forge is an enterprise-grade platform that orchestrates specialist AI agents — Analyst, Architect, Developer, Reviewer, Tester, DevOps and Operations — across the software delivery lifecycle, securely, intelligently and at scale.</p>
-          <p>The Forge Project Manager coordinates every agent, context and workflow end-to-end: from intent, to plan, to execution, to delivery, to continuous learning — ensuring the right work gets done, the right way.</p>
+          <p>AI assistance is often fragmented across software delivery — each interaction starts with limited context, requirements/architecture/code decisions become separated, and review, approval and accountability often sit outside the AI workflow. What's missing is coordination across people, agents, context and controls.</p>
+          <p>Forge brings the engineering team into one working environment. Engineers work with specialist AI agents that understand the project, follow defined ways of working, and coordinate when a task spans several roles — directly, one-to-one, or through the optional Forge Project Manager, which involves the relevant specialists and maintains continuity across their contributions.</p>
         </div>
         <div class="indepth-card">
-          <h4>How It's Built</h4>
-          <p>Forge runs on a shared Context Engine and knowledge graph, an Intelligent Workflow Engine, dynamic Agent Handoff, and a Decision Layer for human-in-the-loop approvals. It is model-agnostic (Claude, OpenAI, Gemini, Llama, Mistral, Azure OpenAI or enterprise models) and deployable on-prem, in a private cloud, or across hybrid and multi-cloud environments.</p>
-          <p>Native connectors reach your existing toolchain — Jira, Confluence, GitHub, GitLab, Azure DevOps, SonarQube, Nexus and more — with open APIs and SDKs to extend further.</p>
+          <h4>Shared Project Context & Structured Skills</h4>
+          <p>Forge organises project information — requirements and project documents, architecture and technical material, source repositories, standards/templates/working instructions, and relevant conversation and task history — into a common working context that agents can access according to their permissions. This enables consistent interpretation across roles, continuity between specialists, project-aligned outputs and traceability to source material.</p>
+          <p>Each skill combines role instructions with the organisation's approved standards, templates and review criteria. As the deck puts it: "The model provides intelligence. The skill applies your way of working."</p>
         </div>
         <div class="indepth-card">
-          <h4>Security & Compliance</h4>
-          <p>Forge Studio brings governance, approvals, auditability and real-time observability across every agent and workflow: policy-driven controls, role-based access, immutable audit trails and evidence packs aligned to frameworks such as MAS, ISO, SOC, OWASP and NIST.</p>
-          <p>Data isolation, encryption and tenant controls ensure your data and models stay entirely within your control.</p>
+          <h4>Human Control & Enterprise Controls</h4>
+          <p>Forge can pause a supported action and request an authorised decision — approve, redirect or reject — before work continues, with the request, response and outcome retained. Human engineering approval remains required before merge and release.</p>
+          <p>Enterprise controls surround every Forge project at the boundary where agents, information and repositories come together: identity and access (authenticated users and sessions, role and project entitlements), project isolation (files and agents scoped to the project, separate repository credentials), security and accountability (credentials kept outside prompts, all activity recorded), and operational visibility (agent and execution-host status, provisioning, trace and health records).</p>
         </div>
       </div>
 
       <div>
         <div class="highlights-card">
           <h4>Key Highlights</h4>
-          <div class="highlight-item"><span class="check-badge">✓</span> Secure by design — built-in security, data isolation and enterprise controls.</div>
-          <div class="highlight-item"><span class="check-badge">✓</span> Compliant & audit-ready — end-to-end traceability and evidence for regulators.</div>
-          <div class="highlight-item"><span class="check-badge">✓</span> Flexible & future-ready — deploy anywhere, integrate easily, evolve continuously.</div>
-          <div class="highlight-item"><span class="check-badge">✓</span> Integration first — deep integrations with your existing tools and workflows.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Specialist agents — roles aligned to software engineering responsibilities.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Shared project context — requirements, documents, repositories and prior work.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Structured skills — role-specific methods, templates and standards.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Human control — visibility, intervention and approval at defined points.</div>
         </div>
 
         <div class="metrics-grid">
-          <div class="metric-tile"><div class="value">95%+</div><div class="label">Requirements coverage detected</div></div>
-          <div class="metric-tile"><div class="value">90%+</div><div class="label">Test automation coverage</div></div>
-          <div class="metric-tile"><div class="value">70%</div><div class="label">Faster requirements structuring</div></div>
-          <div class="metric-tile"><div class="value">40%</div><div class="label">Faster test creation</div></div>
+          <div class="metric-tile"><div class="value">6</div><div class="label">Specialist agent roles, one shared context</div></div>
+          <div class="metric-tile"><div class="value">3</div><div class="label">Human checkpoints per request: review, approve, authorise</div></div>
+          <div class="metric-tile"><div class="value">3</div><div class="label">Deployment modes: cloud, on-prem, hybrid</div></div>
+          <div class="metric-tile"><div class="value">100%</div><div class="label">Human approval required before merge and release</div></div>
         </div>
 
-        <div class="spotlight-card">
-          <h4>Use Case Spotlight</h4>
-          <p>MAS Day 2 Vulnerability Management: a six-agent closed-loop pipeline — SRE, PM, Developer, Reviewer, Tech Lead and QA agents — orchestrated by Forge to detect, triage, remediate and validate vulnerabilities on MAS's own toolchain, reducing mean time to remediate while strengthening auditability and governance.</p>
-          <a href="#">Read Case Study →</a>
+        <div class="spotlight-card" id="case-studies">
+          <h4>Use Case Spotlight — Day-2 Vulnerability Remediation</h4>
+          <p><b>Financial regulator · DevSecOps application.</b> SonarQube or Nexus IQ identifies a code-quality, security or dependency finding that requires investigation and remediation. Forge workflow: finding analysed → risk and impact assessed → remediation prepared → unit tests generated → independent review → validation completed → pull request prepared, using Jira, GitLab, SonarQube, Nexus IQ and ServiceNow. Human engineering approval remains required before merge and release.</p>
+
+          <div class="spotlight-more" data-spotlight-more>
+            <div class="spotlight-more-inner">
+              <p><b>Employee order management system</b> (IT services · internal employee operations): a requested workflow or business-rule change goes through requirement clarified → application impact assessed → change prepared → unit tests prepared → independent review → validation completed → release documentation prepared.</p>
+              <p><b>Multi-component defect resolution</b> (enterprise workflow application): a defect affecting several parts of a modular application is worked through expected-behaviour reconstruction, affected-component identification, coordinated investigation, correction, regression-impact validation and release packaging.</p>
+              <p><b>End-to-end SDLC delivery</b> (enterprise case-management application): introducing a policy-based, multi-level approval workflow — from requirements and solution design through implementation, independent review, validation and release prepared for human approval.</p>
+            </div>
+          </div>
+
+          <button type="button" class="spotlight-toggle" data-spotlight-toggle>See more use cases <span class="chev">▾</span></button>
         </div>
       </div>
     </div>
@@ -334,15 +379,15 @@
     <div class="video-grid">
       <div class="video-card">
         <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
-        <div class="video-meta"><h4>Product Overview</h4><p>A walkthrough of the Forge Orchestrator and its specialised AI agents.</p></div>
+        <div class="video-meta"><h4>Product Overview</h4><p>A walkthrough of Forge's specialist agents and the Forge Project Manager.</p></div>
       </div>
       <div class="video-card">
         <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
-        <div class="video-meta"><h4>Getting Started</h4><p>Connect your toolchain and run your first orchestrated workflow.</p></div>
+        <div class="video-meta"><h4>Getting Started</h4><p>Connect your toolchain and run your first coordinated engineering request.</p></div>
       </div>
       <div class="video-card">
         <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
-        <div class="video-meta"><h4>Advanced Features</h4><p>Governance, observability and Delivery Intelligence dashboards in Forge Studio.</p></div>
+        <div class="video-meta"><h4>Human Control & Governance</h4><p>How Forge pauses supported actions for approval, redirection or rejection at critical points.</p></div>
       </div>
     </div>
   </div>
@@ -379,51 +424,40 @@
 <section class="pricing-section">
   <div class="container">
     <div class="section-head on-light">
-      <span class="eyebrow">Simple Pricing</span>
-      <h2>Choose Your Plan</h2>
-      <p>All plans include a 14-day free trial. No credit card required.</p>
+      <span class="eyebrow">Enterprise Controls</span>
+      <h2>Controls Apply at the Project Boundary</h2>
+      <p>Where agents, information and repositories come together — access, isolation, accountability and operational controls surround every configured project environment.</p>
     </div>
     <div class="pricing-grid">
       <div class="price-card">
-        <div class="tier">Starter</div>
-        <div class="price">$49<span>/mo</span></div>
+        <div class="tier">Identity and Access</div>
         <ul>
-          <li>✓ Forge Analyst & Architect agents</li>
-          <li>✓ Core SDLC integrations</li>
-          <li>✓ Standard observability</li>
-          <li>✓ Email support</li>
+          <li>✓ Authenticated users and sessions</li>
+          <li>✓ Role and project entitlements</li>
         </ul>
-        <a href="#" class="btn btn-outline btn-block">Get Started</a>
       </div>
       <div class="price-card featured">
-        <div class="price-badge">Most Popular</div>
-        <div class="tier">Pro</div>
-        <div class="price">$149<span>/mo</span></div>
+        <div class="price-badge">Project Isolation</div>
+        <div class="tier">Scoped to the Project</div>
         <ul>
-          <li>✓ Everything in Starter</li>
-          <li>✓ Full agent workforce (Analyst → Operations)</li>
-          <li>✓ Forge Studio governance & dashboards</li>
-          <li>✓ Priority support</li>
+          <li>✓ Files and agents scoped to the project</li>
+          <li>✓ Separate repository credentials</li>
         </ul>
-        <a href="#" class="btn btn-primary btn-block">Start Free Trial</a>
       </div>
       <div class="price-card">
-        <div class="tier">Enterprise</div>
-        <div class="price">Custom<span>/mo</span></div>
+        <div class="tier">Security & Accountability</div>
         <ul>
-          <li>✓ Everything in Pro</li>
-          <li>✓ On-prem / private cloud deployment</li>
-          <li>✓ Custom compliance & audit packs</li>
-          <li>✓ Dedicated solutions manager</li>
+          <li>✓ Credentials kept outside prompts</li>
+          <li>✓ User, administrator and agent activity recorded</li>
         </ul>
-        <a href="#" class="btn btn-outline btn-block">Get Started</a>
       </div>
     </div>
+    <p style="text-align:center; max-width:640px; margin:32px auto 0; color:var(--gray-600); font-size:14px;">Operational visibility: agent and execution-host status, provisioning, trace and health records.</p>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="faq-section">
+<section class="faq-section" id="faq">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">Got Questions?</span>
@@ -432,23 +466,23 @@
     <div class="faq-list">
       <div class="faq-item open">
         <button class="faq-question">What is Forge? <span class="chev">▾</span></button>
-        <div class="faq-answer"><p>Forge is Optimum's Enterprise Agentic SDLC Platform — a coordinated team of specialised AI agents (Analyst, Architect, Developer, Reviewer, Tester, DevOps, Operations) orchestrated by the Forge Project Manager to take software from requirements to production, with engineers in control at every step.</p></div>
+        <div class="faq-answer"><p>Forge is Optimum's agentic software engineering platform — specialist AI agents (Business Analyst, Architect, Developer, Code Reviewer, QA and Release) working from a shared project context, with structured skills and human control, coordinated directly or through the optional Forge Project Manager.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">How does the free trial work? <span class="chev">▾</span></button>
-        <div class="faq-answer"><p>Every plan includes a 14-day free trial with no credit card required, so your team can run real workflows through Forge before committing.</p></div>
+        <button class="faq-question">Do humans stay in control? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>Yes. Forge can pause a supported action and request an authorised decision — approve, redirect or reject — before work continues, and human engineering approval remains required before merge and release.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Which languages does Forge support? <span class="chev">▾</span></button>
-        <div class="faq-answer"><p>Forge Developer generates context-aware, idiomatic code across mainstream enterprise languages and works with your existing IDEs, including VS Code, IntelliJ IDEA, Eclipse, JetBrains Fleet, Cursor and GitHub Copilot–compatible environments.</p></div>
+        <button class="faq-question">Can specialists work one-to-one, or does everything go through a project manager? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>Both. Teams can work directly with the specialist agent best suited to a task — clarify requirements, review designs, develop or examine code, request an independent review — or let the Forge Project Manager coordinate several agents for changes spanning roles, defects touching several components, or coordinated release checks.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Can I integrate Forge with my existing tools? <span class="chev">▾</span></button>
-        <div class="faq-answer"><p>Yes. Forge natively integrates with Jira, Confluence, GitHub, GitLab, Azure DevOps, SonarQube and Nexus, with open APIs and SDKs to extend to additional connectors.</p></div>
+        <div class="faq-answer"><p>Yes. Connections are configured for each organisation's toolchain — including Jira and Confluence for planning, GitHub/GitLab/Azure DevOps for source and delivery, SonarQube and Nexus IQ for quality controls, and CI/CD, approval workflows and service management (e.g. ServiceNow) for delivery workflows.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Is Forge suitable for enterprise teams? <span class="chev">▾</span></button>
-        <div class="faq-answer"><p>Forge is built for enterprise scale — secure by design, model-agnostic, deployable on-prem or in hybrid/multi-cloud environments, and governed end-to-end through Forge Studio's policies, approvals and audit trails. It is already trusted in engagements with leading financial institutions.</p></div>
+        <div class="faq-answer"><p>Yes. Forge is model and LLM agnostic, deployable cloud, on-premises or hybrid, with local or managed execution hosts and project-specific repository access — plus identity and access controls, project isolation, accountability and operational visibility around every project environment.</p></div>
       </div>
     </div>
   </div>
@@ -511,5 +545,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<a href="#" class="mobile-float-cta" data-mobile-cta>Download / Get Started</a>
 </body>
 </html>

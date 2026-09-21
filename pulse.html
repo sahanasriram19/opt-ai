@@ -47,11 +47,11 @@
           <a class="ai-dropdown-item" href="pulse.html">
             <span class="left"><span class="ai-dot pulse"></span> Pulse</span><span class="arrow">→</span>
           </a>
-          <a class="ai-dropdown-item" href="ai-studio.html">
-            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span><span class="arrow">→</span>
-          </a>
           <a class="ai-dropdown-item" href="cohesionx.html">
             <span class="left"><span class="ai-dot cohesionx"></span> CohesionX</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="ai-studio.html">
+            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span><span class="arrow">→</span>
           </a>
         </div>
       </li>
@@ -65,12 +65,23 @@
   </div>
 </header>
 
+<!-- ============ AI SWITCHER ============ -->
+<div class="ai-switcher">
+  <div class="container">
+    <span class="ai-switcher-label">Optimum AI Suite:</span>
+    <a href="forge.html" class="ai-switcher-pill forge">Forge</a>
+    <a href="pulse.html" class="ai-switcher-pill pulse active">Pulse</a>
+    <a href="cohesionx.html" class="ai-switcher-pill cohesionx">CohesionX</a>
+    <a href="ai-studio.html" class="ai-switcher-pill aistudio">AI Studio</a>
+  </div>
+</div>
+
 <!-- ============ HERO ============ -->
 <section class="product-hero theme-pulse">
   <div class="container">
     <div class="product-hero-grid">
       <div>
-        <span class="product-badge">AI Product</span>
+        <img src="images/pulse.png" alt="Pulse logo" class="product-logo">
         <h1>Pulse</h1>
         <p class="subtitle">Agentic Test Engineering</p>
         <div class="brand-divider"><span class="dot"></span></div>
@@ -87,7 +98,9 @@
         </div>
       </div>
 
-      <!-- Live demo panel -->
+      <!-- Live demo panel: laptop/browser chrome, personalised to Pulse — a test run
+           moving autonomously across its 5 phases, plus a live log of what each
+           phase is producing (no human-approval gate: Pulse runs headless). -->
       <div class="demo-window">
         <div class="demo-titlebar">
           <span class="demo-dot red"></span><span class="demo-dot yellow"></span><span class="demo-dot green"></span>
@@ -95,31 +108,32 @@
           <span class="demo-live-dot" title="Live"></span>
         </div>
         <div class="demo-body">
-          <div class="demo-panel">
-            <div class="demo-skeleton-line w-70"></div>
-            <div class="demo-skeleton-line w-45"></div>
-            <div class="demo-skeleton-line accent"></div>
-            <div class="demo-skeleton-line w-85"></div>
-            <div class="demo-skeleton-line w-45"></div>
-            <div class="demo-icons-row">
-              <div class="demo-icon-block" data-demo-icon></div>
-              <div class="demo-icon-block" data-demo-icon></div>
-              <div class="demo-icon-block" data-demo-icon></div>
-              <div class="demo-icon-block" data-demo-icon></div>
+          <div class="demo-panel pipeline-panel">
+            <div class="pipeline-request">Run: <b>Autonomous QA — one upload, one run</b></div>
+            <div class="pipeline-track" data-pipeline>
+              <div class="pipeline-line"></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></span><span class="node-label">Scope</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="node-label">Discover</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/></svg></span><span class="node-label">Observe</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span><span class="node-label">Generate</span></div>
+              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span><span class="node-label">Assemble</span></div>
+              <div class="pipeline-ticket" data-ticket></div>
+            </div>
+            <div class="demo-metric-tiles">
+              <div class="demo-metric-tile"><b data-count-to="8">0</b><span>Synthetic data types</span></div>
+              <div class="demo-metric-tile"><b data-count-to="6">0</b><span>Specialised AI agents</span></div>
             </div>
           </div>
           <div class="demo-panel">
-            <div class="demo-log" data-demo-log></div>
-            <div class="demo-metrics">
-              <div class="demo-metric">
-                <div class="label">Processing <b>—</b></div>
-                <div class="bar" data-demo-bar data-min="30" data-max="90"><span style="width:0%"></span></div>
-              </div>
-              <div class="demo-metric">
-                <div class="label">Accuracy <b>—</b></div>
-                <div class="bar" data-demo-bar data-min="75" data-max="97"><span style="width:0%"></span></div>
-              </div>
-            </div>
+            <div class="demo-log" data-demo-log='[
+              "Testing inputs uploaded",
+              "[Scope] Identifying in-scope technologies & components",
+              "[Discover] Mapping boundaries, dependencies & data flows",
+              "[Observe] Analysing runtime logs, where provided",
+              "[Generate] Generating test cases, synthetic data & scripts",
+              "[Assemble] Building traceability & coverage reports",
+              "✓ Autonomous run complete"
+            ]'></div>
           </div>
         </div>
       </div>
@@ -127,6 +141,16 @@
   </div>
 </section>
 
+<!-- ============ SECTION BOOKMARKS ============ -->
+<nav class="page-tabs" data-page-tabs>
+  <div class="container">
+    <a class="page-tab" href="#overview">Overview</a>
+    <a class="page-tab" href="#capabilities">Capabilities</a>
+    <a class="page-tab" href="#tools">Tools</a>
+    <a class="page-tab" href="#case-studies">Case Studies</a>
+    <a class="page-tab" href="#faq">FAQ</a>
+  </div>
+</nav>
 <!-- ============ TRUSTED BY ============ -->
 <section class="trusted-strip">
   <div class="container">
@@ -143,7 +167,7 @@
 </section>
 
 <!-- ============ STANDOUT QUALITIES ============ -->
-<section class="standout-section">
+<section class="standout-section" id="overview">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Why Choose Us</span>
@@ -170,7 +194,7 @@
 </section>
 
 <!-- ============ WORKFLOW: 5 phases, one autonomous run ============ -->
-<section class="workflow-section pulse">
+<section class="workflow-section pulse" id="capabilities">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">How Pulse Works</span>
@@ -258,7 +282,7 @@
 </section>
 
 <!-- ============ INTEGRATIONS ============ -->
-<section class="integrations-section">
+<section class="integrations-section" id="tools">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">Integrations</span>
@@ -336,7 +360,7 @@
           <div class="metric-tile"><div class="value">5</div><div class="label">Automation frameworks</div></div>
         </div>
 
-        <div class="spotlight-card">
+        <div class="spotlight-card" id="case-studies">
           <h4>Part of Optimum's Enterprise AI Portfolio</h4>
           <p>Pulse operates alongside Forge (Agentic Software Engineering) and CohesionX (AI Runtime Assurance) under AI Studio's governance — purpose-built platforms, unified by governance, assured by design.</p>
           <a href="index.html#ai-platforms">Explore the full AI Portfolio →</a>
@@ -445,7 +469,7 @@
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="faq-section">
+<section class="faq-section" id="faq">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">Got Questions?</span>
@@ -533,5 +557,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<a href="#" class="mobile-float-cta" data-mobile-cta>Start Free Trial</a>
 </body>
 </html>

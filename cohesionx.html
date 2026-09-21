@@ -47,11 +47,11 @@
           <a class="ai-dropdown-item" href="pulse.html">
             <span class="left"><span class="ai-dot pulse"></span> Pulse</span><span class="arrow">→</span>
           </a>
-          <a class="ai-dropdown-item" href="ai-studio.html">
-            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span><span class="arrow">→</span>
-          </a>
           <a class="ai-dropdown-item" href="cohesionx.html">
             <span class="left"><span class="ai-dot cohesionx"></span> CohesionX</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="ai-studio.html">
+            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span><span class="arrow">→</span>
           </a>
         </div>
       </li>
@@ -65,12 +65,23 @@
   </div>
 </header>
 
+<!-- ============ AI SWITCHER ============ -->
+<div class="ai-switcher">
+  <div class="container">
+    <span class="ai-switcher-label">Optimum AI Suite:</span>
+    <a href="forge.html" class="ai-switcher-pill forge">Forge</a>
+    <a href="pulse.html" class="ai-switcher-pill pulse">Pulse</a>
+    <a href="cohesionx.html" class="ai-switcher-pill cohesionx active">CohesionX</a>
+    <a href="ai-studio.html" class="ai-switcher-pill aistudio">AI Studio</a>
+  </div>
+</div>
+
 <!-- ============ HERO ============ -->
 <section class="product-hero theme-cohesionx">
   <div class="container">
     <div class="product-hero-grid">
       <div>
-        <span class="product-badge">AI Product</span>
+        <img src="images/cohesionx.png" alt="CohesionX logo" class="product-logo">
         <h1>CohesionX</h1>
         <p class="subtitle">AI Runtime Assurance & Decision Intelligence</p>
         <div class="brand-divider"><span class="dot"></span></div>
@@ -97,24 +108,49 @@
         <div class="drw-flow">
           <div class="drw-col">
             <div class="drw-col-label">Input</div>
-            <div class="drw-chip active">Model</div>
-            <div class="drw-chip">Agent</div>
-            <div class="drw-chip">Tool</div>
-            <div class="drw-chip">System</div>
+            <div class="drw-chip active">
+              <span class="drw-chip-icon model"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+              <span>Model</span>
+            </div>
+            <div class="drw-chip">
+              <span class="drw-chip-icon agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="14" r="1.4" fill="currentColor" stroke="none"/><circle cx="15" cy="14" r="1.4" fill="currentColor" stroke="none"/></svg></span>
+              <span>Agent</span>
+            </div>
+            <div class="drw-chip">
+              <span class="drw-chip-icon tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2.9 2.9 6-6a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.9-2.9 2.6-2.6z"/></svg></span>
+              <span>Tool</span>
+            </div>
+            <div class="drw-chip">
+              <span class="drw-chip-icon system"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="6" rx="1.5"/><rect x="4" y="15" width="16" height="6" rx="1.5"/><path d="M8 6h.01M8 18h.01"/></svg></span>
+              <span>System</span>
+            </div>
           </div>
           <div class="drw-arrow-icon">→</div>
           <div class="drw-center">
             <div class="drw-record">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00b8bb" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
             </div>
             <div class="drw-col-label" style="margin:2px 0 0;">Process</div>
           </div>
           <div class="drw-arrow-icon">→</div>
           <div class="drw-col">
             <div class="drw-col-label">Output</div>
-            <div class="drw-chip">Reconstruct</div>
-            <div class="drw-chip">Verify</div>
-            <div class="drw-chip">Report</div>
+            <div class="drw-chip">
+              <span class="drw-chip-icon reconstruct"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></span>
+              <span>Reconstruct</span>
+            </div>
+            <div class="drw-chip">
+              <span class="drw-chip-icon verifiable"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 12l1.8 1.8L15 10.2"/></svg></span>
+              <span>Verifiable</span>
+            </div>
+            <div class="drw-chip">
+              <span class="drw-chip-icon assurance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-5-5"/></svg></span>
+              <span>Assurance</span>
+            </div>
+            <div class="drw-chip">
+              <span class="drw-chip-icon reporting"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span>
+              <span>Reporting</span>
+            </div>
           </div>
         </div>
 
@@ -137,6 +173,16 @@
   </div>
 </section>
 
+<!-- ============ SECTION BOOKMARKS ============ -->
+<nav class="page-tabs" data-page-tabs>
+  <div class="container">
+    <a class="page-tab" href="#overview">Overview</a>
+    <a class="page-tab" href="#capabilities">Capabilities</a>
+    <a class="page-tab" href="#tools">Tools</a>
+    <a class="page-tab" href="#case-studies">Case Studies</a>
+    <a class="page-tab" href="#faq">FAQ</a>
+  </div>
+</nav>
 <!-- ============ TRUSTED BY ============ -->
 <section class="trusted-strip">
   <div class="container">
@@ -153,7 +199,7 @@
 </section>
 
 <!-- ============ STANDOUT QUALITIES ============ -->
-<section class="standout-section">
+<section class="standout-section" id="overview">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Why Choose Us</span>
@@ -180,7 +226,7 @@
 </section>
 
 <!-- ============ WORKFLOW ============ -->
-<section class="workflow-section cohesionx">
+<section class="workflow-section cohesionx" id="capabilities">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">How CohesionX Works</span>
@@ -253,7 +299,7 @@
 </section>
 
 <!-- ============ INTEGRATIONS ============ -->
-<section class="integrations-section">
+<section class="integrations-section" id="tools">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">Integrations</span>
@@ -331,7 +377,7 @@
           <div class="metric-tile"><div class="value">2</div><div class="label">Deployment modes: cloud or on-prem</div></div>
         </div>
 
-        <div class="spotlight-card">
+        <div class="spotlight-card" id="case-studies">
           <h4>Part of Optimum's Enterprise AI Portfolio</h4>
           <p>CohesionX operates alongside Forge (Agentic Software Engineering) and Pulse (Agentic Quality Engineering) under AI Studio's governance — purpose-built platforms, unified by governance, assured by design.</p>
           <a href="index.html#ai-platforms">Explore the full AI Portfolio →</a>
@@ -440,7 +486,7 @@
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="faq-section">
+<section class="faq-section" id="faq">
   <div class="container">
     <div class="section-head on-light">
       <span class="eyebrow">Got Questions?</span>
@@ -528,5 +574,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<a href="#" class="mobile-float-cta" data-mobile-cta>Request a Briefing</a>
 </body>
 </html>

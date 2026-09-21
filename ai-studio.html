@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Studio — Enterprise AI Control Plane | Optimum Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="aistudio-page">
+
+<!-- ============ HEADER / NAVBAR ============ -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="brand">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="4" r="2.2" fill="#f47920"/>
+          <circle cx="19" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+          <circle cx="19" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+          <circle cx="12" cy="20" r="2.2" fill="#f47920" opacity="0.55"/>
+          <circle cx="5" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+          <circle cx="5" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+          <circle cx="12" cy="12" r="2.6" fill="#f47920"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Optimum Solutions</span>
+        <span class="brand-tagline">Empowering Business through Technology</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#">Services</a></li>
+      <li><a href="index.html#">Industry</a></li>
+      <li><a href="index.html#">Insights</a></li>
+      <li><a href="index.html#">Careers</a></li>
+      <li><a href="index.html#">About</a></li>
+      <li class="nav-item-dropdown">
+        <button class="nav-item">AIs <span class="chevron">▾</span></button>
+        <div class="ai-dropdown">
+          <div class="ai-dropdown-label">AI Products</div>
+          <a class="ai-dropdown-item" href="forge.html">
+            <span class="left"><span class="ai-dot forge"></span> Forge</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="pulse.html">
+            <span class="left"><span class="ai-dot pulse"></span> Pulse</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="ai-studio.html">
+            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="cohesionx.html">
+            <span class="left"><span class="ai-dot cohesionx"></span> CohesionX</span><span class="arrow">→</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <div class="nav-right">
+      <button type="button" class="nav-search" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <a href="#" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="product-hero theme-aistudio">
+  <div class="container">
+    <div class="product-hero-grid">
+      <div>
+        <span class="product-badge">AI Product</span>
+        <h1>AI Studio</h1>
+        <p class="subtitle">Enterprise AI Control Plane</p>
+        <div class="brand-divider"><span class="dot"></span></div>
+        <p class="lede">The unified platform to build, govern, operate and observe agents across the enterprise. AI Studio brings together people, data, tools and models as its foundation, so every agent moves through the same governed lifecycle — from build to continuous improvement.</p>
+        <div class="actions">
+          <a href="#" class="btn btn-primary">Start Free Trial</a>
+          <a href="#" class="btn btn-outline-white">See Demo</a>
+          <a href="#" class="btn btn-outline-white">Talk to an AI Expert</a>
+        </div>
+      </div>
+
+      <!-- Live Agent Lifecycle carousel — accurate to the AI Studio platform diagram -->
+      <div class="lifecycle-window"
+           data-lifecycle='[
+             {"title":"Build","body":"Create and configure skills, agents and capabilities."},
+             {"title":"Govern","body":"Apply policies, guardrails, permissions and approval workflows."},
+             {"title":"Run","body":"Deploy agents with controls for safe and trusted execution."},
+             {"title":"Observe","body":"Monitor performance, usage, quality and outcomes."},
+             {"title":"Improve","body":"Evaluate, learn and continuously optimize agents and skills."}
+           ]'>
+        <div class="lifecycle-label">Agent Lifecycle</div>
+        <div class="lifecycle-steps">
+          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <span class="lifecycle-arrow">→</span>
+          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <span class="lifecycle-arrow">→</span>
+          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg></div>
+          <span class="lifecycle-arrow">→</span>
+          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 4-8"/></svg></div>
+          <span class="lifecycle-arrow">→</span>
+          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3.5-7.1"/><path d="M21 3v6h-6"/></svg></div>
+        </div>
+        <div class="lifecycle-step-labels">
+          <span>Build</span><span></span><span>Govern</span><span></span><span>Run</span><span></span><span>Observe</span><span></span><span>Improve</span>
+        </div>
+        <div class="lifecycle-detail">
+          <div class="lifecycle-detail-icon"></div>
+          <div>
+            <h4></h4>
+            <p></p>
+          </div>
+        </div>
+        <div class="lifecycle-dots">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUSTED BY ============ -->
+<section class="trusted-strip">
+  <div class="container">
+    <div class="label">Trusted by Leading Enterprises</div>
+    <div class="logo-row">
+      <span class="logo-pill">Standard Chartered</span>
+      <span class="logo-pill">UOB</span>
+      <span class="logo-pill">Morgan Stanley</span>
+      <span class="logo-pill">Citi</span>
+      <span class="logo-pill">JPMorgan Chase</span>
+      <span class="logo-pill">Google</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STANDOUT QUALITIES ============ -->
+<section class="standout-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>Standout Qualities</h2>
+    </div>
+    <div class="standout-grid">
+      <div>
+        <div class="standout-num">01</div>
+        <h3>Built for Every Role</h3>
+        <p>People & Teams is foundational — roles, responsibilities and collaboration are defined before any agent goes live.</p>
+      </div>
+      <div>
+        <div class="standout-num">02</div>
+        <h3>Governed at Every Step</h3>
+        <p>Safety & guardrails, scoped permissions, and human-in-the-loop approvals for sensitive actions and decisions.</p>
+      </div>
+      <div>
+        <div class="standout-num">03</div>
+        <h3>Enterprise Ready by Design</h3>
+        <p>Secure by default, private by design, role-based access and multi-tenant isolation — compliance ready from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKFLOW: Agent Lifecycle ============ -->
+<section class="workflow-section aistudio">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">How It Works</span>
+      <h2>The Agent Lifecycle</h2>
+      <p>Every agent in AI Studio moves through the same five governed stages, from creation to continuous improvement.</p>
+    </div>
+
+    <div class="workflow-rows">
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">1</div>
+          <div>
+            <h4>Build</h4>
+            <p>Create and configure skills, agents and capabilities. Skills are reusable playbooks that define expertise and behaviour; agents are specialised and custom-built with defined skills, tools and guardrails.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">2</div>
+          <div>
+            <h4>Govern</h4>
+            <p>Apply organisational policies, guardrails, permissions and approval workflows before agents run — with human-in-the-loop review at the right points in every workflow.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">3</div>
+          <div>
+            <h4>Run</h4>
+            <p>Deploy agents with controls for safe and trusted execution — scoped permissions, fine-grained access to data, tools and capabilities.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">4</div>
+          <div>
+            <h4>Observe</h4>
+            <p>Monitor performance, usage, quality and outcomes in real time: execution intelligence, latency and accuracy, token/cost usage, and dashboards & reports for every stakeholder.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 4-8"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">5</div>
+          <div>
+            <h4>Improve</h4>
+            <p>Evaluate, learn and continuously optimize agents and skills based on real-world outcomes, quality evaluations and feedback.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 12a9 9 0 11-3.5-7.1"/><path d="M21 3v6h-6"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRATIONS ============ -->
+<section class="integrations-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">Model Agnostic</span>
+      <h2>Choose What Works Best For You</h2>
+      <p>AI Studio's model layer is fully model-agnostic, and connects seamlessly with your enterprise data, tools and systems.</p>
+    </div>
+  </div>
+
+  <div class="marquee-row">
+    <div class="marquee-track">
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=anthropic.com" alt="Claude logo" onerror="this.style.display='none'"></span> Claude</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=openai.com" alt="OpenAI logo" onerror="this.style.display='none'"></span> OpenAI</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=gemini.google.com" alt="Gemini logo" onerror="this.style.display='none'"></span> Gemini</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=llama.meta.com" alt="Llama logo" onerror="this.style.display='none'"></span> Llama</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=anthropic.com" alt="Claude logo" onerror="this.style.display='none'"></span> Claude</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=openai.com" alt="OpenAI logo" onerror="this.style.display='none'"></span> OpenAI</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=gemini.google.com" alt="Gemini logo" onerror="this.style.display='none'"></span> Gemini</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=llama.meta.com" alt="Llama logo" onerror="this.style.display='none'"></span> Llama</div>
+    </div>
+  </div>
+  <div class="marquee-row">
+    <div class="marquee-track reverse">
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=mistral.ai" alt="Mistral AI logo" onerror="this.style.display='none'"></span> Mistral AI</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=azure.microsoft.com" alt="Azure OpenAI logo" onerror="this.style.display='none'"></span> Azure OpenAI</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=jira.com" alt="Jira logo" onerror="this.style.display='none'"></span> Jira</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=servicenow.com" alt="ServiceNow logo" onerror="this.style.display='none'"></span> ServiceNow</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=mistral.ai" alt="Mistral AI logo" onerror="this.style.display='none'"></span> Mistral AI</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=azure.microsoft.com" alt="Azure OpenAI logo" onerror="this.style.display='none'"></span> Azure OpenAI</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=jira.com" alt="Jira logo" onerror="this.style.display='none'"></span> Jira</div>
+      <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=servicenow.com" alt="ServiceNow logo" onerror="this.style.display='none'"></span> ServiceNow</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IN-DEPTH ============ -->
+<section class="indepth-section" id="in-depth">
+  <div class="container">
+    <div class="section-head on-light" style="text-align:left; margin:0 0 40px;">
+      <span class="eyebrow">In Depth</span>
+      <h2>More About AI Studio</h2>
+      <p>AI Studio is the unified platform to build, govern, operate and observe agents across the enterprise.</p>
+    </div>
+
+    <div class="indepth-grid">
+      <div>
+        <div class="indepth-card">
+          <h4>Overview</h4>
+          <p>AI Studio is Optimum's Enterprise AI Control Plane. It rests on four foundations — People & Teams, Data & Knowledge, Tools & Integrations, and Models — and lets you build on top with reusable Skills, specialised Agents, and composable Capabilities that solve business problems and drive outcomes.</p>
+          <p>AI Studio is the plane that connects Optimum's other AI platforms — Forge, Pulse and CohesionX — into One Enterprise AI Portfolio, unified by governance and assured by design.</p>
+        </div>
+        <div class="indepth-card">
+          <h4>How It's Built</h4>
+          <p>Every agent moves through the same Agent Lifecycle: Build (create and configure skills, agents and capabilities), Govern (apply policies, guardrails, permissions and approval workflows), Run (deploy with controls for safe execution), Observe (monitor performance, usage, quality and outcomes), and Improve (evaluate, learn and continuously optimize).</p>
+          <p>Observability spans Execution Intelligence, Performance & Quality, Usage & Cost, and real-time Dashboards & Reports for every stakeholder.</p>
+        </div>
+        <div class="indepth-card">
+          <h4>Security & Compliance</h4>
+          <p>Governance, security and compliance are built in from the start: Safety & Guardrails prevent misuse and protect the enterprise; Scoped Permissions give fine-grained access control; Approvals & Workflows enforce human-in-the-loop review for sensitive actions; Audit Trails keep immutable logs of every action and decision; and Policy Compliance and Data Security enforce enterprise policies and standards.</p>
+          <p>AI Studio is enterprise-ready by design: secure by default, private by design, role-based access, multi-tenant isolation, and compliance ready.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="highlights-card">
+          <h4>Key Highlights</h4>
+          <div class="highlight-item"><span class="check-badge">✓</span> Build with reusable skills and specialised, purpose-built agents.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Govern with policies, guardrails and human-in-the-loop approvals.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Observe execution, performance, usage and cost in real time.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Improve continuously through evaluation, learning and feedback.</div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-tile"><div class="value">4</div><div class="label">Foundation pillars: People, Data, Tools, Models</div></div>
+          <div class="metric-tile"><div class="value">3</div><div class="label">Capability types: Skills, Agents, Capabilities</div></div>
+          <div class="metric-tile"><div class="value">5</div><div class="label">Lifecycle stages: Build → Improve</div></div>
+          <div class="metric-tile"><div class="value">5</div><div class="label">Observability dimensions</div></div>
+        </div>
+
+        <div class="spotlight-card">
+          <h4>The Enterprise AI Control Plane</h4>
+          <p>AI Studio connects Forge (Agentic Software Engineering), Pulse (Agentic Quality Engineering) and CohesionX (AI Runtime Assurance & Decision Intelligence) into one enterprise AI portfolio — cloud agnostic, model agnostic, and enterprise integrated.</p>
+          <a href="index.html#ai-platforms">Explore the full AI Portfolio →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section class="videos-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Watch & Learn</span>
+      <h2>Videos</h2>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
+        <div class="video-meta"><h4>Product Overview</h4><p>A tour of the AI Studio control plane and its four foundations.</p></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
+        <div class="video-meta"><h4>Getting Started</h4><p>Build your first skill and agent, then move it through the lifecycle.</p></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
+        <div class="video-meta"><h4>Advanced Features</h4><p>Governance, observability and cost visibility across your agent fleet.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">What Customers Say</span>
+      <h2>Testimonials</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p>Placeholder testimonial. This is where a real customer quote will appear.</p>
+        <div class="testimonial-person"><div class="avatar">P</div><div><b>Person</b><span>Position</span></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p>Placeholder testimonial. This is where a real customer quote will appear.</p>
+        <div class="testimonial-person"><div class="avatar">P</div><div><b>Person</b><span>Position</span></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p>Placeholder testimonial. This is where a real customer quote will appear.</p>
+        <div class="testimonial-person"><div class="avatar">P</div><div><b>Person</b><span>Position</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">Simple Pricing</span>
+      <h2>Choose Your Plan</h2>
+      <p>All plans include a 14-day free trial. No credit card required.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="tier">Starter</div>
+        <div class="price">$49<span>/mo</span></div>
+        <ul>
+          <li>✓ Build & Govern stages</li>
+          <li>✓ Reusable skills library</li>
+          <li>✓ Standard observability</li>
+          <li>✓ Email support</li>
+        </ul>
+        <a href="#" class="btn btn-outline btn-block">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Most Popular</div>
+        <div class="tier">Pro</div>
+        <div class="price">$149<span>/mo</span></div>
+        <ul>
+          <li>✓ Everything in Starter</li>
+          <li>✓ Full agent lifecycle: Build → Improve</li>
+          <li>✓ Real-time observability & cost dashboards</li>
+          <li>✓ Priority support</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block">Start Free Trial</a>
+      </div>
+      <div class="price-card">
+        <div class="tier">Enterprise</div>
+        <div class="price">Custom<span>/mo</span></div>
+        <ul>
+          <li>✓ Everything in Pro</li>
+          <li>✓ Multi-tenant isolation & custom compliance packs</li>
+          <li>✓ On-prem / private cloud deployment</li>
+          <li>✓ Dedicated solutions manager</li>
+        </ul>
+        <a href="#" class="btn btn-outline btn-block">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">Got Questions?</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-question">What is AI Studio? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>AI Studio is Optimum's Enterprise AI Control Plane — the unified platform to build, govern, operate and observe AI agents across the enterprise, from reusable skills to specialised agents and composable capabilities.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do I need ML expertise to use AI Studio? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>No. AI Studio is built around People & Teams — defining roles, responsibilities and collaboration — plus reusable skills and playbooks that define expertise and behaviour, so teams can build and govern agents without ML expertise.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Which foundation models are supported? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>AI Studio is model-agnostic — choose what works best for you and swap models without re-architecting your agents.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How is my data kept secure? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>AI Studio is secure by default and private by design: enterprise-grade data security, scoped permissions, role-based access, multi-tenant isolation, and immutable audit trails of every action and decision.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How does AI Studio govern agents? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>Through built-in Safety & Guardrails, Approvals & Workflows with human-in-the-loop review at sensitive decisions, immutable Audit Trails, and Policy Compliance enforced across the entire Agent Lifecycle.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Ready to Deploy AI Studio?</h2>
+    <p>Talk to our solutions team and get a tailored proof-of-concept within two weeks.</p>
+    <a href="#" class="btn btn-white">Schedule a Conversation</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand">
+        <span class="mark">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="4" r="2.2" fill="#f47920"/>
+            <circle cx="19" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+            <circle cx="19" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+            <circle cx="12" cy="20" r="2.2" fill="#f47920" opacity="0.55"/>
+            <circle cx="5" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+            <circle cx="5" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+            <circle cx="12" cy="12" r="2.6" fill="#f47920"/>
+          </svg>
+        </span>
+        Optimum Solutions      </a>
+      <p class="brand-tagline" style="margin-bottom:10px;">Empowering Business through Technology</p>
+      <p>A trusted global partner delivering AI-powered digital transformation, enterprise engineering and banking operations to leading organisations worldwide — 30+ years of excellence, est. 1997.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="index.html">Artificial Intelligence</a></li>
+        <li><a href="index.html">Data & Analytics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="index.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>AI Products</h4>
+      <ul>
+        <li><a href="forge.html">Forge</a></li>
+        <li><a href="pulse.html">Pulse</a></li>
+        <li><a href="ai-studio.html">AI Studio</a></li>
+        <li><a href="cohesionx.html">CohesionX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Optimum Solutions. All rights reserved.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

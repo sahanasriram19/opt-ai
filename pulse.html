@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — Agentic Test Engineering | Optimum Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="pulse-page">
+
+<!-- ============ HEADER / NAVBAR ============ -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="brand">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="4" r="2.2" fill="#f47920"/>
+          <circle cx="19" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+          <circle cx="19" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+          <circle cx="12" cy="20" r="2.2" fill="#f47920" opacity="0.55"/>
+          <circle cx="5" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+          <circle cx="5" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+          <circle cx="12" cy="12" r="2.6" fill="#f47920"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Optimum Solutions</span>
+        <span class="brand-tagline">Empowering Business through Technology</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#">Services</a></li>
+      <li><a href="index.html#">Industry</a></li>
+      <li><a href="index.html#">Insights</a></li>
+      <li><a href="index.html#">Careers</a></li>
+      <li><a href="index.html#">About</a></li>
+      <li class="nav-item-dropdown">
+        <button class="nav-item">AIs <span class="chevron">▾</span></button>
+        <div class="ai-dropdown">
+          <div class="ai-dropdown-label">AI Products</div>
+          <a class="ai-dropdown-item" href="forge.html">
+            <span class="left"><span class="ai-dot forge"></span> Forge</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="pulse.html">
+            <span class="left"><span class="ai-dot pulse"></span> Pulse</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="ai-studio.html">
+            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span><span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="cohesionx.html">
+            <span class="left"><span class="ai-dot cohesionx"></span> CohesionX</span><span class="arrow">→</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <div class="nav-right">
+      <button type="button" class="nav-search" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <a href="#" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="product-hero theme-pulse">
+  <div class="container">
+    <div class="product-hero-grid">
+      <div>
+        <span class="product-badge">AI Product</span>
+        <h1>Pulse</h1>
+        <p class="subtitle">Agentic Test Engineering</p>
+        <div class="brand-divider"><span class="dot"></span></div>
+        <p class="lede">Release with Confidence. Upload your testing inputs once. Pulse's headless AI QA Expert autonomously discovers your application and generates a connected suite of testing assets — test strategy, cases, synthetic data, automation scripts, traceability and coverage.</p>
+        <div class="actions">
+          <a href="#" class="btn btn-primary">Start Free Trial</a>
+          <a href="#" class="btn btn-outline-white">See Demo</a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="hero-stat"><div class="value">5</div><div class="label">Autonomous phases, one run</div></div>
+          <div class="hero-stat"><div class="value">8</div><div class="label">Synthetic test data types</div></div>
+          <div class="hero-stat"><div class="value">5</div><div class="label">Automation frameworks supported</div></div>
+        </div>
+      </div>
+
+      <!-- Live demo panel -->
+      <div class="demo-window">
+        <div class="demo-titlebar">
+          <span class="demo-dot red"></span><span class="demo-dot yellow"></span><span class="demo-dot green"></span>
+          <span class="demo-url">app.optimum.ai</span>
+          <span class="demo-live-dot" title="Live"></span>
+        </div>
+        <div class="demo-body">
+          <div class="demo-panel">
+            <div class="demo-skeleton-line w-70"></div>
+            <div class="demo-skeleton-line w-45"></div>
+            <div class="demo-skeleton-line accent"></div>
+            <div class="demo-skeleton-line w-85"></div>
+            <div class="demo-skeleton-line w-45"></div>
+            <div class="demo-icons-row">
+              <div class="demo-icon-block" data-demo-icon></div>
+              <div class="demo-icon-block" data-demo-icon></div>
+              <div class="demo-icon-block" data-demo-icon></div>
+              <div class="demo-icon-block" data-demo-icon></div>
+            </div>
+          </div>
+          <div class="demo-panel">
+            <div class="demo-log" data-demo-log></div>
+            <div class="demo-metrics">
+              <div class="demo-metric">
+                <div class="label">Processing <b>—</b></div>
+                <div class="bar" data-demo-bar data-min="30" data-max="90"><span style="width:0%"></span></div>
+              </div>
+              <div class="demo-metric">
+                <div class="label">Accuracy <b>—</b></div>
+                <div class="bar" data-demo-bar data-min="75" data-max="97"><span style="width:0%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUSTED BY ============ -->
+<section class="trusted-strip">
+  <div class="container">
+    <div class="label">Trusted by Leading Enterprises</div>
+    <div class="logo-row">
+      <span class="logo-pill">Standard Chartered</span>
+      <span class="logo-pill">UOB</span>
+      <span class="logo-pill">Morgan Stanley</span>
+      <span class="logo-pill">Citi</span>
+      <span class="logo-pill">JPMorgan Chase</span>
+      <span class="logo-pill">Google</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STANDOUT QUALITIES ============ -->
+<section class="standout-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>Standout Qualities</h2>
+    </div>
+    <div class="standout-grid">
+      <div>
+        <div class="standout-num">01</div>
+        <h3>Autonomous</h3>
+        <p>One upload triggers an end-to-end asset generation workflow — no manual mapping or repetitive effort.</p>
+      </div>
+      <div>
+        <div class="standout-num">02</div>
+        <h3>Discovery Driven</h3>
+        <p>Pulse reverse-engineers your application to understand its boundaries, dependencies and business rules before it designs a single test.</p>
+      </div>
+      <div>
+        <div class="standout-num">03</div>
+        <h3>Traceable</h3>
+        <p>Every generated asset links back to requirements, code and discovered system boundaries — ready for review and audit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKFLOW: 5 phases, one autonomous run ============ -->
+<section class="workflow-section pulse">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">How Pulse Works</span>
+      <h2>Five Phases, One Autonomous Run</h2>
+      <p>One upload triggers a headless AI QA Expert that orchestrates specialised agents to deliver a complete suite of testing assets.</p>
+    </div>
+
+    <div class="workflow-rows">
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">1</div>
+          <div>
+            <h4>Scope</h4>
+            <p>Identifies the in-scope technologies, components and inputs to establish the context for discovery. Output: in-scope inventory, technology stack, assumptions & inputs, test objectives.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">2</div>
+          <div>
+            <h4>Discover</h4>
+            <p>Reverse engineers the application to discover system boundaries, dependencies, data flows and business rules. Output: system map, dependencies, business rules, test scenarios.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">3</div>
+          <div>
+            <h4>Observe <span style="font-weight:500;color:var(--gray-500);font-size:13px;">(optional, when runtime logs are provided)</span></h4>
+            <p>Analyses runtime logs and telemetry to understand actual behaviour and data patterns. Output: behaviour insights, data patterns, usage flows, risk indicators.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">4</div>
+          <div>
+            <h4>Generate</h4>
+            <p>AI agents generate test cases, synthetic data and automation scripts aligned to discovered coverage and risks. Output: test cases, synthetic data, automation scripts, test data sets.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow-row">
+        <div class="workflow-text">
+          <div class="step-num">5</div>
+          <div>
+            <h4>Assemble</h4>
+            <p>Assembles all assets, links them to requirements and delivers traceability, coverage and audit reports. Output: traceability matrix, coverage mapping, test plan, generation report.</p>
+          </div>
+        </div>
+        <div class="workflow-visual">
+          <div class="visual-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRATIONS ============ -->
+<section class="integrations-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">Integrations</span>
+      <h2>Works With Your Environment & Tools</h2>
+      <p>Pulse is fully headless — no UI to manage — and integrates directly with the tools your teams already use.</p>
+    </div>
+    <div class="marquee-row">
+      <div class="marquee-track">
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=jira.com" alt="Jira logo" onerror="this.style.display='none'"></span> Jira</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=confluence.com" alt="Confluence logo" onerror="this.style.display='none'"></span> Confluence</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=gitlab.com" alt="GitLab logo" onerror="this.style.display='none'"></span> GitLab</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonarsource.com" alt="SonarQube logo" onerror="this.style.display='none'"></span> SonarQube</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=jira.com" alt="Jira logo" onerror="this.style.display='none'"></span> Jira</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=confluence.com" alt="Confluence logo" onerror="this.style.display='none'"></span> Confluence</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=gitlab.com" alt="GitLab logo" onerror="this.style.display='none'"></span> GitLab</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonarsource.com" alt="SonarQube logo" onerror="this.style.display='none'"></span> SonarQube</div>
+      </div>
+    </div>
+    <div class="marquee-row">
+      <div class="marquee-track reverse">
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonatype.com" alt="Nexus IQ logo" onerror="this.style.display='none'"></span> Nexus IQ</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonatype.com" alt="Nexus Repository logo" onerror="this.style.display='none'"></span> Nexus Repository</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=paloaltonetworks.com" alt="Twistlock logo" onerror="this.style.display='none'"></span> Twistlock</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=servicenow.com" alt="ServiceNow logo" onerror="this.style.display='none'"></span> ServiceNow</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonatype.com" alt="Nexus IQ logo" onerror="this.style.display='none'"></span> Nexus IQ</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=sonatype.com" alt="Nexus Repository logo" onerror="this.style.display='none'"></span> Nexus Repository</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=paloaltonetworks.com" alt="Twistlock logo" onerror="this.style.display='none'"></span> Twistlock</div>
+        <div class="integration-pill"><span class="integration-badge"><img src="https://www.google.com/s2/favicons?sz=128&domain=servicenow.com" alt="ServiceNow logo" onerror="this.style.display='none'"></span> ServiceNow</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IN-DEPTH ============ -->
+<section class="indepth-section" id="in-depth">
+  <div class="container">
+    <div class="section-head on-light" style="text-align:left; margin:0 0 40px;">
+      <span class="eyebrow">In Depth</span>
+      <h2>More About Pulse</h2>
+      <p>Headless. Intelligent. Autonomous. Pulse's AI QA Expert orchestrates specialised agents to get the job done — no manual coordination, no context switching.</p>
+    </div>
+
+    <div class="indepth-grid">
+      <div>
+        <div class="indepth-card">
+          <h4>Overview</h4>
+          <p>Pulse is Optimum's headless, autonomous AI QA Expert. Upload your testing inputs once — requirements, source code, database schemas, APIs, business rules and supporting documents — and Pulse orchestrates specialised agents to analyse your application, discover its tested surface, and generate a comprehensive, connected suite of testing assets, autonomously.</p>
+          <p>Generated assets include a test strategy and plan, positive/negative/edge test cases, synthetic test data, framework-aligned automation scripts, a traceability matrix, coverage mapping, and audit-ready generation reports.</p>
+        </div>
+        <div class="indepth-card">
+          <h4>How It's Built</h4>
+          <p>Pulse's QA Expert AI understands your context, sets the plan, and orchestrates six specialised agents working in parallel under shared memory and context: Discovery, Test Design, Test Data, Automation, Coverage and Reporting.</p>
+          <p>It is fully headless — no UI to manage — and deploys as cloud or on-prem SaaS, integrating natively with Jira, Confluence, GitLab, SonarQube, Nexus IQ, Nexus Repository, Twistlock, ServiceNow and more.</p>
+        </div>
+        <div class="indepth-card">
+          <h4>Security & Compliance</h4>
+          <p>Pulse is secure and governed by design: it does not train on your data, and its Synthetic Data Engine is privacy- and security-aware, with built-in support for masking and sensitive (PII) data handling.</p>
+          <p>Every generated asset — test cases, scripts, data and reports — remains linked to its source requirement, code and discovered boundary for full traceability and audit readiness.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="highlights-card">
+          <h4>Key Highlights</h4>
+          <div class="highlight-item"><span class="check-badge">✓</span> Autonomous — one upload triggers an end-to-end asset generation workflow.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Discovery driven — reverse-engineers the application to understand boundaries, dependencies and business rules.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Comprehensive — generates connected testing assets from a shared understanding of the application.</div>
+          <div class="highlight-item"><span class="check-badge">✓</span> Traceable — every asset links back to requirements, code and discovered system boundaries.</div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-tile"><div class="value">5</div><div class="label">Phases: Scope to Assemble</div></div>
+          <div class="metric-tile"><div class="value">8</div><div class="label">Synthetic test data types</div></div>
+          <div class="metric-tile"><div class="value">6</div><div class="label">Specialised AI agents</div></div>
+          <div class="metric-tile"><div class="value">5</div><div class="label">Automation frameworks</div></div>
+        </div>
+
+        <div class="spotlight-card">
+          <h4>Part of Optimum's Enterprise AI Portfolio</h4>
+          <p>Pulse operates alongside Forge (Agentic Software Engineering) and CohesionX (AI Runtime Assurance) under AI Studio's governance — purpose-built platforms, unified by governance, assured by design.</p>
+          <a href="index.html#ai-platforms">Explore the full AI Portfolio →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section class="videos-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Watch & Learn</span>
+      <h2>Videos</h2>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
+        <div class="video-meta"><h4>Product Overview</h4><p>How Pulse's QA Expert orchestrates discovery, generation and assembly.</p></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
+        <div class="video-meta"><h4>Getting Started</h4><p>Upload your testing inputs and run your first autonomous Pulse generation.</p></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><div class="play-btn">▶</div><span class="video-time">0:00</span></div>
+        <div class="video-meta"><h4>Advanced Features</h4><p>Synthetic data generation, boundary discovery and impact mapping in depth.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">What Customers Say</span>
+      <h2>Testimonials</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p>Placeholder testimonial. This is where a real customer quote will appear.</p>
+        <div class="testimonial-person"><div class="avatar">P</div><div><b>Person</b><span>Position</span></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p>Placeholder testimonial. This is where a real customer quote will appear.</p>
+        <div class="testimonial-person"><div class="avatar">P</div><div><b>Person</b><span>Position</span></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p>Placeholder testimonial. This is where a real customer quote will appear.</p>
+        <div class="testimonial-person"><div class="avatar">P</div><div><b>Person</b><span>Position</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">Simple Pricing</span>
+      <h2>Choose Your Plan</h2>
+      <p>All plans include a 14-day free trial. No credit card required.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="tier">Starter</div>
+        <div class="price">$49<span>/mo</span></div>
+        <ul>
+          <li>✓ Discovery & Test Design agents</li>
+          <li>✓ Core test case generation</li>
+          <li>✓ Standard traceability</li>
+          <li>✓ Email support</li>
+        </ul>
+        <a href="#" class="btn btn-outline btn-block">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Most Popular</div>
+        <div class="tier">Pro</div>
+        <div class="price">$149<span>/mo</span></div>
+        <ul>
+          <li>✓ Everything in Starter</li>
+          <li>✓ Full agent suite: Discovery, Data, Automation, Coverage, Reporting</li>
+          <li>✓ Synthetic test data generation</li>
+          <li>✓ Priority support</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block">Start Free Trial</a>
+      </div>
+      <div class="price-card">
+        <div class="tier">Enterprise</div>
+        <div class="price">Custom<span>/mo</span></div>
+        <ul>
+          <li>✓ Everything in Pro</li>
+          <li>✓ On-prem / private cloud SaaS deployment</li>
+          <li>✓ Custom framework & tool integrations</li>
+          <li>✓ Dedicated solutions manager</li>
+        </ul>
+        <a href="#" class="btn btn-outline btn-block">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-head on-light">
+      <span class="eyebrow">Got Questions?</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-question">What is Pulse? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>Pulse is Optimum's headless, autonomous AI QA Expert. Upload your testing inputs once, and Pulse's specialised agents discover your application, analyse its tested surface, and generate a connected suite of testing assets: test strategy and plan, test cases, synthetic data, automation scripts, a traceability matrix and coverage reports.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How does Pulse discover my application? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>Pulse's Discovery Engine explores your source code, APIs, database schemas and business rules, then analyses, maps, correlates and prioritises them to build a unified, risk-ranked application map — in minutes, not weeks.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What test data can Pulse generate? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>Pulse's Synthetic Data Engine generates 8 types of realistic, compliant test data — master & reference, transactional, personal & PII, financial, temporal, log & event, unstructured, and edge & exception data — without depending on production data.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Which automation frameworks does Pulse support? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>Pulse generates framework-aligned automation scripts for REST Assured, JUnit, Playwright, Karate and Gatling — clean, modular and ready for review, integration and execution.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is Pulse secure, and does it train on my data? <span class="chev">▾</span></button>
+        <div class="faq-answer"><p>Pulse is secure and governed by design — it does not train on your data, integrates with your existing enterprise ecosystem (Jira, Confluence, GitLab, SonarQube, Nexus, ServiceNow and more), and can be deployed in cloud or on-prem SaaS environments.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Ready to Deploy Pulse?</h2>
+    <p>Talk to our solutions team and get a tailored proof-of-concept within two weeks.</p>
+    <a href="#" class="btn btn-white">Schedule a Conversation</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand">
+        <span class="mark">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="4" r="2.2" fill="#f47920"/>
+            <circle cx="19" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+            <circle cx="19" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+            <circle cx="12" cy="20" r="2.2" fill="#f47920" opacity="0.55"/>
+            <circle cx="5" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+            <circle cx="5" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+            <circle cx="12" cy="12" r="2.6" fill="#f47920"/>
+          </svg>
+        </span>
+        Optimum Solutions      </a>
+      <p class="brand-tagline" style="margin-bottom:10px;">Empowering Business through Technology</p>
+      <p>A trusted global partner delivering AI-powered digital transformation, enterprise engineering and banking operations to leading organisations worldwide — 30+ years of excellence, est. 1997.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="index.html">Artificial Intelligence</a></li>
+        <li><a href="index.html">Data & Analytics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="index.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>AI Products</h4>
+      <ul>
+        <li><a href="forge.html">Forge</a></li>
+        <li><a href="pulse.html">Pulse</a></li>
+        <li><a href="ai-studio.html">AI Studio</a></li>
+        <li><a href="cohesionx.html">CohesionX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Optimum Solutions. All rights reserved.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

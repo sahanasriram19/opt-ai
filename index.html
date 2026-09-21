@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Optimum Solutions — Driving Enterprise Innovation with AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============ HEADER / NAVBAR ============ -->
+<!-- NOTE: this is the ONLY part of the homepage that changes:
+     the new "AIs" dropdown item has been added to the existing nav. -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="brand">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="4" r="2.2" fill="#f47920"/>
+          <circle cx="19" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+          <circle cx="19" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+          <circle cx="12" cy="20" r="2.2" fill="#f47920" opacity="0.55"/>
+          <circle cx="5" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+          <circle cx="5" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+          <circle cx="12" cy="12" r="2.6" fill="#f47920"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Optimum Solutions</span>
+        <span class="brand-tagline">Empowering Business through Technology</span>
+      </span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#" class="active">Services</a></li>
+      <li><a href="#">Industry</a></li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">About</a></li>
+      <li class="nav-item-dropdown">
+        <button class="nav-item">AIs <span class="chevron">▾</span></button>
+        <div class="ai-dropdown">
+          <div class="ai-dropdown-label">AI Products</div>
+          <a class="ai-dropdown-item" href="forge.html">
+            <span class="left"><span class="ai-dot forge"></span> Forge</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="pulse.html">
+            <span class="left"><span class="ai-dot pulse"></span> Pulse</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="ai-studio.html">
+            <span class="left"><span class="ai-dot aistudio"></span> AI Studio</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="ai-dropdown-item" href="cohesionx.html">
+            <span class="left"><span class="ai-dot cohesionx"></span> CohesionX</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-right">
+      <button type="button" class="nav-search" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <a href="#" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HOME HERO (unchanged content) ============ -->
+<section class="hero-home">
+  <div class="container">
+    <h1>Driving Enterprise Innovation with AI</h1>
+    <div class="brand-divider"><span class="dot"></span></div>
+    <p>From predictive insights to autonomous operations, our AI solutions help future-ready businesses make smarter, faster, and more human-centric decisions.</p>
+    <div class="actions">
+      <a href="#ai-platforms" class="btn btn-primary">Know More</a>
+      <a href="#" class="btn btn-outline-white">Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEW: AI PLATFORMS SHORTCUT SECTION ============ -->
+<section class="ai-platforms-section" id="ai-platforms">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">AI Product Suite</span>
+      <h2>Our AI Platforms</h2>
+    </div>
+
+    <div class="ai-platform-grid">
+      <a href="forge.html" class="ai-platform-card">
+        <div class="ai-platform-icon forge"><span class="dot"></span></div>
+        <h3>Forge</h3>
+        <p>Agentic Software Engineering — from requirements to production.</p>
+        <span class="explore forge">Explore →</span>
+      </a>
+      <a href="pulse.html" class="ai-platform-card">
+        <div class="ai-platform-icon pulse"><span class="dot"></span></div>
+        <h3>Pulse</h3>
+        <p>Agentic Quality Engineering — understand the app, test with confidence.</p>
+        <span class="explore pulse">Explore →</span>
+      </a>
+      <a href="ai-studio.html" class="ai-platform-card">
+        <div class="ai-platform-icon aistudio"><span class="dot"></span></div>
+        <h3>AI Studio</h3>
+        <p>Enterprise AI Control Plane — build, govern, operate, observe, improve.</p>
+        <span class="explore aistudio">Explore →</span>
+      </a>
+      <a href="cohesionx.html" class="ai-platform-card">
+        <div class="ai-platform-icon cohesionx"><span class="dot"></span></div>
+        <h3>CohesionX</h3>
+        <p>AI Runtime Assurance & Decision Intelligence, reconstructed and verifiable.</p>
+        <span class="explore cohesionx">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED HIGHLIGHTS (matches real site's rotating hero cards) ============ -->
+<section class="featured-strip">
+  <div class="container">
+    <div class="featured-grid">
+      <div class="featured-card">
+        <h4>Pan-Asia Presence, Global Delivery</h4>
+        <p>Offices and delivery centres across Asia backing a global client base, combining local expertise with enterprise-grade delivery.</p>
+        <a href="#">Know More →</a>
+      </div>
+      <div class="featured-card">
+        <h4>Trusted by 15 of the Top 25 Global Banks</h4>
+        <p>Deep, long-standing partnerships with the world's leading financial institutions across banking and financial services.</p>
+        <a href="#">Case Studies →</a>
+      </div>
+      <div class="featured-card">
+        <h4>Navigating the Digital Future</h4>
+        <p>Engineering the enterprise for the age of AI — helping organisations modernise, automate and scale with confidence.</p>
+        <a href="#">Know More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES (real 9-service grid) ============ -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Do</span>
+      <h2>Our Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
+        <h4>Artificial Intelligence</h4>
+        <p>Implementing practical and relevant AI solutions with a consultative, collaborative approach.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 18h6"/></svg></div>
+        <h4>App Development & Maintenance</h4>
+        <p>Deep domain capabilities, IP assets and methodologies to build and support next-generation, future-ready applications.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div>
+        <h4>Data & Analytics</h4>
+        <p>Unlock the strategic value of enterprise data to become a data-driven organisation and drive business value.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 21h18M6 21V9l6-4 6 4v12"/></svg></div>
+        <h4>Global Capability Centers</h4>
+        <p>GCCs evolved from cost-driven offshore units into strategic extensions of enterprise operations.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h4>Cloud, Infrastructure & Security</h4>
+        <p>Migrating your infrastructure to the cloud goes beyond just mapping over identical services.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h4>Testing</h4>
+        <p>In-depth knowledge of functional and non-functional testing merged with web, mobile and cloud technology.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M17 2.1l4 4-4 4M3 12.9a9 9 0 0 1 9-9h9M7 21.9l-4-4 4-4M21 11.1a9 9 0 0 1-9 9H3"/></svg></div>
+        <h4>DevOps & Agile</h4>
+        <p>Faster, safer delivery pipelines and agile ways of working embedded into your engineering teams.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg></div>
+        <h4>Digital Customer Experience</h4>
+        <p>Designing and building seamless, connected digital experiences across every customer touchpoint.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 3H5a2 2 0 0 0-2 2v4M15 3h4a2 2 0 0 1 2 2v4M9 21H5a2 2 0 0 1-2-2v-4M15 21h4a2 2 0 0 0 2-2v-4"/></svg></div>
+        <h4>Business Process Management</h4>
+        <p>Streamlining and automating core business processes to improve efficiency and consistency at scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (real 5-column structure) ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="brand">
+          <span class="mark">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="4" r="2.2" fill="#f47920"/>
+              <circle cx="19" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+              <circle cx="19" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+              <circle cx="12" cy="20" r="2.2" fill="#f47920" opacity="0.55"/>
+              <circle cx="5" cy="15.5" r="2.2" fill="#f47920" opacity="0.7"/>
+              <circle cx="5" cy="8.5" r="2.2" fill="#f47920" opacity="0.85"/>
+              <circle cx="12" cy="12" r="2.6" fill="#f47920"/>
+            </svg>
+          </span>
+          Optimum Solutions        </a>
+        <p class="brand-tagline">Empowering Business through Technology</p>
+      </div>
+    </div>
+
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Artificial Intelligence</a></li>
+          <li><a href="#">App Dev & Maintenance</a></li>
+          <li><a href="#">Data & Analytics</a></li>
+          <li><a href="#">Global Capability Centers</a></li>
+          <li><a href="#">Cloud, Infrastructure & Security</a></li>
+          <li><a href="#">Testing</a></li>
+          <li><a href="#">DevOps & Agile</a></li>
+          <li><a href="#">Digital Customer Experience</a></li>
+          <li><a href="#">Business Process Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Industry</h4>
+        <ul>
+          <li><a href="#">Banking & Financial Services</a></li>
+          <li><a href="#">Insurance</a></li>
+          <li><a href="#">Hi-Tech</a></li>
+          <li><a href="#">Retail</a></li>
+          <li><a href="#">Public Sector</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Working at Optimum</a></li>
+          <li><a href="#">Recruitment Fraud Alert</a></li>
+          <li><a href="#">Sustainability & ESG</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More Info</h4>
+        <ul>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Net Zero Commitment</a></li>
+          <li><a href="#">D&I Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p class="footer-founded">Founded in 1997.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Glassdoor">G</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="YouTube">YT</a>
+          <a href="#" aria-label="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Optimum Solutions. All rights reserved.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -31,22 +31,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ---------- Spotlight card "see more" toggle ---------- */
+  /* ---------- Spotlight / in-depth card "see more" toggle ---------- */
   var spotlightToggles = document.querySelectorAll("[data-spotlight-toggle]");
   spotlightToggles.forEach(function (btn) {
-    var card = btn.closest(".spotlight-card");
+    var card = btn.closest(".spotlight-card, .indepth-card");
     var more = card ? card.querySelector("[data-spotlight-more]") : null;
     if (!more) return;
+    var labelMore = btn.getAttribute("data-label-more") || "See more use cases";
+    var labelLess = btn.getAttribute("data-label-less") || "Show less";
     btn.addEventListener("click", function () {
       var isOpen = btn.classList.contains("open");
       if (isOpen) {
         more.classList.remove("open");
         btn.classList.remove("open");
-        btn.innerHTML = "See more use cases <span class=\"chev\">▾</span>";
+        btn.innerHTML = labelMore + " <span class=\"chev\">▾</span>";
       } else {
         more.classList.add("open");
         btn.classList.add("open");
-        btn.innerHTML = "Show less <span class=\"chev\">▾</span>";
+        btn.innerHTML = labelLess + " <span class=\"chev\">▾</span>";
       }
     });
   });

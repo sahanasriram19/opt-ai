@@ -134,7 +134,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .brand .mark svg { width: 23px; height: 23px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand-name { color: var(--ink); font-weight: 500; font-size: 18px; }
+.brand-name { color: var(--ink); font-weight: 500; font-size: 22px; }
 .brand-tagline {
   color: var(--orange);
   font-size: 10px;

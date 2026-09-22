@@ -321,14 +321,16 @@ button { font-family: inherit; cursor: pointer; }
   border-color: rgba(255,255,255,0.18);
 }
 .ai-platform-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  padding: 8px;
 }
+.ai-platform-icon img { width: 100%; height: 100%; object-fit: contain; }
 .ai-platform-icon .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--white); }
 .ai-platform-icon.forge { background: rgba(240,112,15,0.16); }
 .ai-platform-icon.forge .dot { background: var(--forge); }

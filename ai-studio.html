@@ -102,6 +102,16 @@
              {"title":"Observe","body":"Monitor performance, usage, quality and outcomes."},
              {"title":"Improve","body":"Evaluate, learn and continuously optimize agents and skills."}
            ]'>
+        <svg class="lifecycle-network" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M40,120 C120,40 160,140 200,80 S320,20 360,60" fill="none" stroke-width="1.5"/>
+          <circle class="network-node" cx="40" cy="120" r="4"/>
+          <circle class="network-node" cx="140" cy="70" r="3"/>
+          <circle class="network-node" cx="240" cy="95" r="4"/>
+          <circle class="network-node" cx="360" cy="60" r="3"/>
+          <circle class="network-dot" r="3">
+            <animateMotion dur="5s" repeatCount="indefinite" path="M40,120 C120,40 160,140 200,80 S320,20 360,60"/>
+          </circle>
+        </svg>
         <div class="lifecycle-label">Agent Lifecycle</div>
         <div class="lifecycle-steps">
           <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
@@ -215,6 +225,11 @@
           <div>
             <h4>Govern</h4>
             <p>Apply organisational policies, guardrails, permissions and approval workflows before agents run — with human-in-the-loop review at the right points in every workflow.</p>
+            <div class="guardrail-ticks">
+              <span class="tick" style="--d:0s">✓ Policy check</span>
+              <span class="tick" style="--d:0.6s">✓ Scoped permissions</span>
+              <span class="tick" style="--d:1.2s">✓ Approval routed</span>
+            </div>
           </div>
         </div>
         <div class="workflow-visual">

@@ -54,8 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* ---------- Live demo panel: typed log (product-specific lines) ---------- */
-  var log = document.querySelector("[data-demo-log]");
-  if (log) {
+  /* Generalised to support more than one log panel per page (e.g. Forge's
+     hero demo log AND its "Live Handoffs" feed further down the page). */
+  var logs = document.querySelectorAll("[data-demo-log]");
+  logs.forEach(function (log) {
     var raw = log.getAttribute("data-demo-log");
     var messages = raw ? JSON.parse(raw) : [
       "Initializing workspace...",
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "Ready.",
       "— system operational —"
     ];
+    var maxLines = parseInt(log.getAttribute("data-max-lines"), 10) || 6;
     var i = 0;
     function typeNext() {
       if (i >= messages.length) { i = 0; log.innerHTML = ""; }
@@ -73,12 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
       line.className = "line" + (isDone ? " done" : "");
       line.textContent = msg;
       log.appendChild(line);
-      while (log.children.length > 6) log.removeChild(log.firstChild);
+      while (log.children.length > maxLines) log.removeChild(log.firstChild);
       i++;
       setTimeout(typeNext, i === messages.length ? 2200 : 950);
     }
     typeNext();
-  }
+  });
 
   /* ---------- Live demo panel: pipeline track (Forge / Pulse) ---------- */
   var pipelines = document.querySelectorAll("[data-pipeline]");
@@ -225,6 +228,90 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleFloatCta();
     window.addEventListener("scroll", toggleFloatCta, { passive: true });
   }
+
+  /* ---------- Scroll-triggered stat counters (hero stats + metric tiles) ---------- */
+  var countUpEls = document.querySelectorAll(".hero-stat .value, .metric-tile .value");
+  if (countUpEls.length && "IntersectionObserver" in window) {
+    countUpEls.forEach(function (el) {
+      var raw = el.textContent.trim();
+      var match = raw.match(/^([\d,]+)(.*)$/);
+      if (!match) return;
+      var target = parseInt(match[1].replace(/,/g, ""), 10);
+      el.setAttribute("data-count-target", target);
+      el.setAttribute("data-count-suffix", match[2] || "");
+      el.textContent = "0" + (match[2] || "");
+    });
+    var countUpObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          if (el.dataset.counted === "true") return;
+          el.dataset.counted = "true";
+          var target = parseInt(el.getAttribute("data-count-target"), 10);
+          var suffix = el.getAttribute("data-count-suffix") || "";
+          var cur = 0;
+          var step = Math.max(1, Math.round(target / 24));
+          var timer = setInterval(function () {
+            cur = Math.min(target, cur + step);
+            el.textContent = cur + suffix;
+            if (cur >= target) clearInterval(timer);
+          }, 45);
+          countUpObserver.unobserve(el);
+        });
+      },
+      { threshold: 0.4, rootMargin: "0px 0px -40px 0px" }
+    );
+    countUpEls.forEach(function (el) { countUpObserver.observe(el); });
+  }
+
+  /* ---------- Cursor-glow: soft light follows the pointer over cards ---------- */
+  var glowEls = document.querySelectorAll(".service-card, .price-card, .featured-card, .ai-platform-card");
+  glowEls.forEach(function (el) {
+    el.addEventListener("mousemove", function (e) {
+      var rect = el.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width) * 100;
+      var y = ((e.clientY - rect.top) / rect.height) * 100;
+      el.style.setProperty("--mx", x + "%");
+      el.style.setProperty("--my", y + "%");
+    });
+  });
+
+  /* ---------- Forge: cycle a "live handoff" highlight across the role cards ---------- */
+  var rolesGrid = document.querySelector(".roles-grid");
+  if (rolesGrid) {
+    var roleCards = rolesGrid.querySelectorAll(".indepth-card");
+    var roleIdx = 0;
+    if (roleCards.length) {
+      setInterval(function () {
+        roleCards.forEach(function (c) { c.classList.remove("active"); });
+        roleCards[roleIdx % roleCards.length].classList.add("active");
+        roleIdx++;
+      }, 1400);
+    }
+  }
+
+  /* ---------- Pulse: looping "live" test-coverage meter ---------- */
+  var coverageEls = document.querySelectorAll("[data-coverage]");
+  coverageEls.forEach(function (root) {
+    var fill = root.querySelector("[data-coverage-fill]");
+    var valueEl = root.querySelector("[data-coverage-value]");
+    if (!fill) return;
+    var target = parseInt(root.getAttribute("data-coverage-target"), 10) || 94;
+    function run() {
+      fill.style.width = "0%";
+      if (valueEl) valueEl.textContent = "0%";
+      var cur = 0;
+      requestAnimationFrame(function () { fill.style.width = target + "%"; });
+      var timer = setInterval(function () {
+        cur = Math.min(target, cur + 2);
+        if (valueEl) valueEl.textContent = cur + "%";
+        if (cur >= target) clearInterval(timer);
+      }, 1800 / (target / 2));
+      setTimeout(run, 5200);
+    }
+    run();
+  });
 
   /* ---------- CohesionX: live Decision Record diagram ---------- */
   var drw = document.querySelector("[data-drw]");

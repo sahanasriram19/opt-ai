@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ---------- Cursor-glow: soft light follows the pointer over cards ---------- */
-  var glowEls = document.querySelectorAll(".service-card, .price-card, .featured-card, .ai-platform-card");
+  var glowEls = document.querySelectorAll(".service-card, .featured-card, .ai-platform-card");
   glowEls.forEach(function (el) {
     el.addEventListener("mousemove", function (e) {
       var rect = el.getBoundingClientRect();

@@ -542,6 +542,34 @@ button { font-family: inherit; cursor: pointer; }
   .product-hero::before { animation: none; }
 }
 
+/* Floating particle dust — a separate ambient layer from the glow blob above */
+.product-hero::after,
+.hero-home .particle-layer {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.28), transparent 60%),
+    radial-gradient(2px 2px at 35% 65%, rgba(255,255,255,0.2), transparent 60%),
+    radial-gradient(1.5px 1.5px at 55% 15%, rgba(255,255,255,0.24), transparent 60%),
+    radial-gradient(2px 2px at 75% 55%, rgba(255,255,255,0.18), transparent 60%),
+    radial-gradient(1.5px 1.5px at 90% 80%, rgba(255,255,255,0.22), transparent 60%),
+    radial-gradient(2px 2px at 20% 90%, rgba(255,255,255,0.16), transparent 60%),
+    radial-gradient(1.5px 1.5px at 65% 40%, rgba(255,255,255,0.2), transparent 60%);
+  background-size: 220px 220px;
+  background-repeat: repeat;
+  animation: particleDrift 22s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  from { background-position: 0 0; }
+  to { background-position: 0 -220px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product-hero::after, .hero-home .particle-layer { animation: none; }
+}
+
 .product-hero .container { max-width: 1440px; position: relative; z-index: 1; }
 .product-hero-grid {
   display: grid;
@@ -713,6 +741,26 @@ button { font-family: inherit; cursor: pointer; }
 .pipeline-request b { color: var(--white); font-weight: 600; }
 .pipeline-track { position: relative; display: flex; flex-direction: column; gap: 16px; padding: 4px 4px; width: fit-content; margin: 0 auto; }
 .pipeline-line { position: absolute; top: 15px; bottom: 15px; left: 19px; width: 2px; background: rgba(255,255,255,0.1); z-index: 0; }
+.pipeline-line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 8px var(--orange);
+  animation: pipelineFlow 3s linear infinite;
+}
+@keyframes pipelineFlow {
+  0% { top: 0; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+body.pulse-page .pipeline-line::after { background: var(--pulse); box-shadow: 0 0 8px var(--pulse); }
 .pipeline-node { position: relative; z-index: 1; display: flex; flex-direction: row; align-items: center; gap: 12px; }
 .pipeline-node .dot {
   width: 30px; height: 30px; border-radius: 8px;
@@ -880,10 +928,33 @@ body.cohesionx-page .page-tab.active { color: var(--cohesionx); border-bottom-co
 @media (max-width: 800px) { .workflow-row { grid-template-columns: 1fr; gap: 20px; } }
 .workflow-text { display: flex; gap: 20px; }
 .step-num {
+  position: relative;
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--orange); color: var(--white);
   display: flex; align-items: center; justify-content: center;
   font-weight: 800; font-size: 15px; flex: none;
+}
+/* Ambient pulsing ring, staggered per row, so the steps read as a live, cascading sequence */
+.step-num::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  z-index: -1;
+  animation: stepPulse 3.2s ease-out infinite;
+}
+@keyframes stepPulse {
+  0% { transform: scale(1); opacity: 0.55; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+.workflow-row:nth-child(1) .step-num::after { animation-delay: 0s; }
+.workflow-row:nth-child(2) .step-num::after { animation-delay: 0.5s; }
+.workflow-row:nth-child(3) .step-num::after { animation-delay: 1s; }
+.workflow-row:nth-child(4) .step-num::after { animation-delay: 1.5s; }
+.workflow-row:nth-child(5) .step-num::after { animation-delay: 2s; }
+@media (prefers-reduced-motion: reduce) {
+  .step-num::after, .pipeline-line::after { animation: none; }
 }
 .workflow-text h4 { margin: 0 0 6px; font-size: 17px; color: var(--ink); }
 .workflow-text p { margin: 0; color: var(--gray-600); font-size: 14px; line-height: 1.6; }
@@ -1102,6 +1173,24 @@ body.cohesionx-page .indepth-list li::before { color: var(--cohesionx); }
   background: var(--orange); color: #fff; flex: none;
   display: flex; align-items: center; justify-content: center; font-size: 12px; margin-top: 1px;
 }
+.check-badge svg { width: 13px; height: 13px; }
+.check-badge svg path {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: checkDraw 4s ease-in-out infinite;
+}
+.highlight-item:nth-child(1) .check-badge svg path { animation-delay: 0s; }
+.highlight-item:nth-child(2) .check-badge svg path { animation-delay: 1s; }
+.highlight-item:nth-child(3) .check-badge svg path { animation-delay: 2s; }
+.highlight-item:nth-child(4) .check-badge svg path { animation-delay: 3s; }
+@keyframes checkDraw {
+  0% { stroke-dashoffset: 24; }
+  15%, 70% { stroke-dashoffset: 0; }
+  85%, 100% { stroke-dashoffset: 24; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .check-badge svg path { animation: none; stroke-dashoffset: 0; }
+}
 .metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
 .metric-tile {
   background: var(--white);
@@ -1216,11 +1305,11 @@ body.cohesionx-page .indepth-card .spotlight-toggle { color: var(--cohesionx); }
 }
 
 /* Cursor-glow: a soft light that follows the pointer across cards */
-.service-card, .price-card, .featured-card, .ai-platform-card {
+.service-card, .featured-card, .ai-platform-card {
   position: relative;
   overflow: hidden;
 }
-.service-card::before, .price-card::before, .featured-card::before, .ai-platform-card::before {
+.service-card::before, .featured-card::before, .ai-platform-card::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1231,16 +1320,13 @@ body.cohesionx-page .indepth-card .spotlight-toggle { color: var(--cohesionx); }
   pointer-events: none;
   z-index: 0;
 }
-.service-card:hover::before, .price-card:hover::before, .featured-card:hover::before, .ai-platform-card:hover::before {
+.service-card:hover::before, .featured-card:hover::before, .ai-platform-card:hover::before {
   opacity: 1;
 }
-.service-card > *, .price-card > *, .featured-card > *, .ai-platform-card > * {
+.service-card > *, .featured-card > *, .ai-platform-card > * {
   position: relative;
   z-index: 1;
 }
-body.pulse-page .price-card::before { background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), rgba(46,163,242,0.16), transparent 70%); }
-body.aistudio-page .price-card::before { background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), rgba(14,165,253,0.16), transparent 70%); }
-body.cohesionx-page .price-card::before { background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), rgba(0,184,187,0.16), transparent 70%); }
 .price-card.featured { border: 2px solid var(--orange); }
 .price-badge {
   position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
@@ -1332,6 +1418,7 @@ body.cohesionx-page .price-card::before { background: radial-gradient(220px circ
 }
 .lifecycle-steps { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 22px; }
 .lifecycle-step {
+  position: relative;
   width: 52px; height: 52px; border-radius: 12px;
   background: var(--navy-800); color: var(--gray-500);
   display: flex; align-items: center; justify-content: center;
@@ -1341,6 +1428,23 @@ body.cohesionx-page .price-card::before { background: radial-gradient(220px circ
 }
 .lifecycle-step svg { width: 22px; height: 22px; }
 .lifecycle-step.active { background: var(--lifecycle-accent); color: #fff; transform: scale(1.08); }
+.lifecycle-step.active::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 16px;
+  border: 2px solid var(--lifecycle-accent);
+  opacity: 0.6;
+  animation: lifecycleRingPulse 1.6s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes lifecycleRingPulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lifecycle-step.active::after { animation: none; }
+}
 .lifecycle-arrow { color: rgba(255,255,255,0.25); font-size: 15px; }
 .lifecycle-step-labels { display: flex; justify-content: center; gap: 8px; margin-top: -10px; margin-bottom: 18px; }
 .lifecycle-step-labels span { width: 52px; text-align: center; font-size: 10.5px; color: var(--gray-500); }

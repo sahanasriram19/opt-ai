@@ -169,9 +169,24 @@ document.addEventListener("DOMContentLoaded", function () {
       if (section) tabSections.push({ link: link, section: section });
     });
 
+    var tabIndicator = document.createElement("span");
+    tabIndicator.className = "page-tab-indicator";
+    pageTabs.querySelector(".container").appendChild(tabIndicator);
+
+    function moveIndicator(activeLink) {
+      tabIndicator.style.width = activeLink.offsetWidth + "px";
+      tabIndicator.style.transform = "translateX(" + activeLink.offsetLeft + "px)";
+    }
+
     function setActiveTab(activeLink) {
       tabLinks.forEach(function (l) { l.classList.toggle("active", l === activeLink); });
+      moveIndicator(activeLink);
     }
+
+    window.addEventListener("resize", function () {
+      var current = pageTabs.querySelector(".page-tab.active");
+      if (current) moveIndicator(current);
+    });
 
     if (tabSections.length) {
       setActiveTab(tabSections[0].link);
@@ -194,7 +209,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var revealSelector = [
     ".section-head", ".service-card", ".featured-card", ".ai-platform-card",
     ".standout-grid > div", ".workflow-row", ".testimonial-card", ".video-card",
-    ".faq-item", ".pricing-card", ".spotlight-card", ".integration-pill"
+    ".faq-item", ".price-card", ".spotlight-card", ".integration-pill",
+    ".indepth-card", ".highlights-card", ".logo-pill", ".metric-tile",
+    ".global-presence-pin", ".final-cta .container", ".footer-col"
   ].join(", ");
   var revealEls = document.querySelectorAll(revealSelector);
   if (revealEls.length && "IntersectionObserver" in window) {

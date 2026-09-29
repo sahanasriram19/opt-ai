@@ -102,15 +102,36 @@
           <span class="demo-live-dot" title="Live"></span>
         </div>
         <div class="app-mock app-mock-dashboard">
+          <div class="as-topbar">
+            <b>OPTIMUM AI STUDIO</b>
+            <span class="as-project">No project selected</span>
+          </div>
+          <div class="as-banner">
+            <span class="as-shield"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <div class="as-banner-text">
+              <b>Welcome back, <em>Admin</em></b>
+              <small>SG AI Governance Control Plane</small>
+            </div>
+            <div class="as-banner-risk">
+              <span class="as-risk-dot"></span>
+              <div><small>GLOBAL RISK</small><b>MEDIUM</b></div>
+            </div>
+            <div class="as-banner-status">
+              <span class="as-status-dot"></span>SYSTEM STATUS<b>OPERATIONAL</b>
+            </div>
+          </div>
           <div class="app-mock-kpi-row">
-            <div class="kpi-tile"><span>Total Requests</span><b data-count-to="31864">0</b></div>
-            <div class="kpi-tile"><span>Risk Alerts</span><b data-count-to="24">0</b></div>
-            <div class="kpi-tile"><span>Active Models</span><b data-count-to="14">0</b></div>
-            <div class="kpi-tile"><span>Policy Compliance</span><b data-count-to="96" data-suffix="%">0</b></div>
+            <div class="kpi-tile"><span>Total Requests</span><b data-count-to="31864">0</b><small class="up">↑12.4%</small></div>
+            <div class="kpi-tile"><span>Risk Alerts</span><b data-count-to="24">0</b><small class="bar-dots"><i class="d-red"></i><i class="d-amber"></i><i class="d-amber"></i></small></div>
+            <div class="kpi-tile"><span>Active AI Models</span><b data-count-to="14">0</b><small class="up">↑2.1%</small></div>
+            <div class="kpi-tile"><span>Policy Compliance</span><b data-count-to="96" data-suffix=".2%">0</b><small class="up">↑1.8%</small></div>
           </div>
           <div class="app-mock-charts-row">
             <div class="app-mock-linechart">
-              <div class="app-mock-linechart-head">Request Volume (7d)</div>
+              <div class="app-mock-linechart-head">
+                Risk Activity Timeline
+                <span class="as-legend"><i class="l-crit"></i>Critical<i class="l-high"></i>High<i class="l-med"></i>Medium</span>
+              </div>
               <svg viewBox="0 0 300 130" preserveAspectRatio="none">
                 <defs>
                   <linearGradient id="aistudioAreaFill" x1="0" y1="0" x2="0" y2="1">
@@ -119,17 +140,34 @@
                   </linearGradient>
                 </defs>
                 <path class="area" d="M0,100 L40,86 L80,92 L120,60 L160,68 L200,40 L240,46 L300,18 L300,130 L0,130 Z"/>
-                <path class="line" d="M0,100 L40,86 L80,92 L120,60 L160,68 L200,40 L240,46 L300,18"/>
+                <path d="M0,88 L40,74 L80,80 L120,50 L160,58 L200,32 L240,38 L300,14" class="line line-crit"/>
+                <path d="M0,100 L40,86 L80,92 L120,60 L160,68 L200,40 L240,46 L300,18" class="line line-high"/>
+                <path d="M0,112 L40,104 L80,108 L120,92 L160,96 L200,84 L240,88 L300,74" class="line line-med"/>
               </svg>
             </div>
             <div class="app-mock-donut">
-              <div class="app-mock-donut-head">Policy Compliance</div>
+              <div class="app-mock-donut-head">Risk Distribution</div>
               <svg viewBox="0 0 120 120">
                 <circle class="app-mock-donut-ring-bg" cx="60" cy="60" r="50"/>
                 <circle class="app-mock-donut-ring" cx="60" cy="60" r="50"/>
               </svg>
-              <div class="app-mock-donut-total">96.2%</div>
-              <div class="app-mock-donut-label">Compliant</div>
+              <div class="app-mock-donut-total">31.9K</div>
+              <div class="app-mock-donut-label">Total Requests</div>
+              <div class="as-donut-legend">
+                <span><i class="l-low"></i>Low <b>77.2%</b></span>
+                <span><i class="l-med"></i>Medium <b>18.3%</b></span>
+                <span><i class="l-high"></i>High <b>4.2%</b></span>
+              </div>
+            </div>
+          </div>
+          <div class="as-bottom-row">
+            <div class="as-panel">
+              <div class="as-panel-head">Governance Agents <em>All Systems Go</em></div>
+              <div class="as-agent-row"><span class="as-dot-ok"></span>Intent Classifier <em>Active</em><small>45,892 reqs · 99.97% uptime</small></div>
+            </div>
+            <div class="as-panel">
+              <div class="as-panel-head">Recent Risk Alerts <em>5 today</em></div>
+              <div class="as-alert-row"><span class="as-dot-warn"></span>Jailbreak attempt on MAS financial endpoint<small>2m ago</small></div>
             </div>
           </div>
         </div>

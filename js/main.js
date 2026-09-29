@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var step = Math.max(1, Math.round(target / 24));
     var timer = setInterval(function () {
       cur = Math.min(target, cur + step);
-      el.textContent = cur + suffix;
+      el.textContent = cur.toLocaleString("en-US") + suffix;
       if (cur >= target) clearInterval(timer);
     }, 55);
   });
@@ -529,5 +529,18 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       path.style.strokeDashoffset = 0;
     }
+  });
+
+  /* ---------- Magnetic buttons ---------- */
+  document.querySelectorAll(".btn-primary, .btn-outline-white, .btn-white, .btn-outline").forEach(function (btn) {
+    btn.addEventListener("mousemove", function (e) {
+      var rect = btn.getBoundingClientRect();
+      var x = (e.clientX - rect.left - rect.width / 2) * 0.3;
+      var y = (e.clientY - rect.top - rect.height / 2) * 0.3;
+      btn.style.transform = "translate(" + x + "px, " + y + "px)";
+    });
+    btn.addEventListener("mouseleave", function () {
+      btn.style.transform = "";
+    });
   });
 });

@@ -4,6 +4,65 @@
    individual AI product pages (Forge, Pulse, AI Studio, CohesionX)
    ========================================================= */
 
+/* Custom cursor — a themed circle that follows the pointer and scales over interactive elements */
+body.custom-cursor-active,
+body.custom-cursor-active a,
+body.custom-cursor-active button,
+body.custom-cursor-active .btn {
+  cursor: none;
+}
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  background: var(--orange);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.18s ease-out, background 0.2s ease;
+}
+body.pulse-page .custom-cursor { background: var(--pulse); }
+body.aistudio-page .custom-cursor { background: var(--aistudio); }
+body.cohesionx-page .custom-cursor { background: var(--cohesionx); }
+.custom-cursor.hover { transform: scale(2.4); }
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor { transition: none; }
+}
+
+/* Scrolling text marquee banner — bold looping tagline strip */
+.text-marquee {
+  overflow: hidden;
+  background: var(--ink);
+  padding: 18px 0;
+}
+.text-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 40px;
+  animation: marqueeLeft 24s linear infinite;
+}
+.text-marquee:hover .text-marquee-track { animation-play-state: paused; }
+.text-marquee-group { display: flex; gap: 40px; flex: none; }
+.text-marquee span {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.text-marquee span.accent { color: var(--orange); }
+body.pulse-page .text-marquee span.accent { color: var(--pulse); }
+body.aistudio-page .text-marquee span.accent { color: var(--aistudio); }
+body.cohesionx-page .text-marquee span.accent { color: var(--cohesionx); }
+@media (prefers-reduced-motion: reduce) {
+  .text-marquee-track { animation: none; }
+}
+
 :root {
   --navy-950: #060d1a;
   --navy-900: #0a1628;
@@ -774,6 +833,164 @@ body.cohesionx-page .site-footer::before { background: linear-gradient(90deg, tr
   min-width: 0;
 }
 @media (max-width: 520px) { .demo-body { grid-template-columns: 1fr; } }
+/* Real product screenshot, shown inside the browser-chrome frame */
+.demo-screenshot { line-height: 0; }
+.demo-screenshot img { width: 100%; height: auto; display: block; }
+
+/* ---------------------------------------------------------
+   Coded "app mock" visuals — recreate each product's real
+   in-app screen with live HTML/CSS/JS instead of a screenshot
+   --------------------------------------------------------- */
+.app-mock { display: flex; min-height: 530px; color: var(--white); }
+
+/* Forge: team-chat layout */
+.app-mock-sidebar {
+  width: 210px;
+  flex: none;
+  background: var(--navy-900);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 10px;
+  overflow: hidden;
+}
+.app-mock-sidebar-head {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+  padding: 4px 8px 12px;
+}
+.app-mock-agent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 3px;
+  transition: background 0.3s ease;
+}
+.app-mock-agent.active { background: rgba(255,255,255,0.07); }
+.app-mock-agent .avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--forge); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10.5px; font-weight: 700; flex: none;
+}
+.app-mock-agent b { display: block; font-size: 12.5px; color: var(--white); font-weight: 600; }
+.app-mock-agent small { display: block; font-size: 10.5px; color: var(--gray-500); }
+.app-mock-chat-panel { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.app-mock-chat-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 13.5px; font-weight: 600;
+}
+.app-mock-chat-head small { color: var(--gray-500); font-weight: 400; margin-left: 2px; }
+.app-mock-chat-body { flex: 1; padding: 20px; min-width: 0; }
+.app-mock-chat-body .demo-log { background: var(--navy-900); border-radius: 10px; padding: 16px; min-height: 200px; font-size: 13px; }
+.app-mock-chat-input {
+  margin: 0 20px 18px;
+  background: var(--navy-900);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--gray-500);
+  font-size: 13px;
+}
+
+/* Pulse: test-generator layout */
+.app-mock-testgen { flex-direction: column; padding: 26px; gap: 0; }
+.app-mock-stats-row { display: flex; gap: 28px; margin-bottom: 22px; }
+.app-mock-stats-row div { text-align: center; }
+.app-mock-stats-row b { display: block; font-size: 22px; color: var(--pulse); }
+.app-mock-stats-row span { font-size: 10.5px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; }
+.app-mock-node-map { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+.app-mock-node {
+  position: relative;
+  background: var(--navy-900);
+  border: 1px solid rgba(46,163,242,0.35);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.app-mock-node::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: 8px;
+  border: 1px solid var(--pulse);
+  opacity: 0;
+  animation: nodePulse 3.2s ease-out infinite;
+}
+.app-mock-node:nth-child(2n)::after { animation-delay: 0.5s; }
+.app-mock-node:nth-child(3n)::after { animation-delay: 1s; }
+.app-mock-node:nth-child(4n)::after { animation-delay: 1.5s; }
+@keyframes nodePulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.08); opacity: 0; }
+}
+.app-mock-node b { display: block; color: var(--pulse); font-size: 15px; }
+.app-mock-node span { font-size: 9.5px; color: var(--gray-500); }
+.app-mock-activity {
+  background: var(--navy-900);
+  border-radius: 10px;
+  padding: 14px 16px;
+  flex: 1;
+  min-height: 0;
+}
+.app-mock-activity-head { font-size: 10.5px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 8px; letter-spacing: 0.05em; }
+.app-mock-activity .demo-log { font-size: 12.5px; }
+
+/* AI Studio: governance dashboard layout */
+.app-mock-dashboard { flex-direction: column; padding: 26px; }
+.app-mock-kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
+.kpi-tile { background: var(--navy-900); border-radius: 8px; padding: 14px; min-width: 0; }
+.kpi-tile span { display: block; font-size: 10.5px; color: var(--gray-500); margin-bottom: 6px; }
+.kpi-tile b { font-size: 19px; color: var(--white); }
+.app-mock-charts-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; flex: 1; min-height: 0; }
+.app-mock-linechart, .app-mock-donut {
+  background: var(--navy-900);
+  border-radius: 8px;
+  padding: 14px;
+  min-width: 0;
+}
+.app-mock-linechart-head, .app-mock-donut-head { font-size: 11px; color: var(--gray-400); margin-bottom: 8px; }
+.app-mock-linechart svg { width: 100%; height: 130px; }
+.app-mock-linechart path.area { fill: url(#aistudioAreaFill); stroke: none; }
+.app-mock-linechart path.line {
+  fill: none;
+  stroke: var(--aistudio);
+  stroke-width: 2;
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  animation: lineDrawOnce 2.4s ease forwards;
+}
+@keyframes lineDrawOnce { to { stroke-dashoffset: 0; } }
+.app-mock-donut { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.app-mock-donut svg { width: 120px; height: 120px; }
+.app-mock-donut-ring-bg { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 12; }
+.app-mock-donut-ring {
+  fill: none;
+  stroke: #22c55e;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  animation: donutDraw 1.8s ease forwards 0.3s;
+}
+@keyframes donutDraw { to { stroke-dashoffset: 12; } }
+.app-mock-donut-total { font-size: 17px; font-weight: 700; margin-top: -78px; }
+.app-mock-donut-label { font-size: 10.5px; color: var(--gray-500); margin-top: 46px; margin-bottom: 14px; }
+@media (prefers-reduced-motion: reduce) {
+  .app-mock-node::after { animation: none; }
+  .app-mock-linechart path.line, .app-mock-donut-ring { animation: none; stroke-dashoffset: 0; }
+  .app-mock-donut-ring { stroke-dashoffset: 12; }
+}
+@media (max-width: 560px) {
+  .app-mock-sidebar { display: none; }
+  .app-mock-node-map { grid-template-columns: repeat(2, 1fr); }
+  .app-mock-kpi-row { grid-template-columns: repeat(2, 1fr); }
+  .app-mock-charts-row { grid-template-columns: 1fr; }
+}
 .demo-panel {
   background: var(--navy-900);
   border-radius: 10px;

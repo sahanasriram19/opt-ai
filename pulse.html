@@ -99,55 +99,32 @@
         </div>
       </div>
 
-      <!-- Live demo panel: laptop/browser chrome, personalised to Pulse — a test run
-           moving autonomously across its 5 phases, plus a live log of what each
-           phase is producing (no human-approval gate: Pulse runs headless). -->
+      <!-- Real product screenshot: the Pulse test-generation workspace -->
       <div class="demo-window">
         <div class="demo-titlebar">
           <span class="demo-dot red"></span><span class="demo-dot yellow"></span><span class="demo-dot green"></span>
-          <span class="demo-url">app.optimum.ai</span>
+          <span class="demo-url">testgen.optimum.ai</span>
           <span class="demo-live-dot" title="Live"></span>
         </div>
-        <div class="demo-body">
-          <div class="demo-panel pipeline-panel">
-            <div class="pipeline-request">Run: <b>Autonomous QA — one upload, one run</b></div>
-            <div class="pipeline-track" data-pipeline>
-              <div class="pipeline-line"></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></span><span class="node-label">Scope</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="node-label">Discover</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/></svg></span><span class="node-label">Observe</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span><span class="node-label">Generate</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span><span class="node-label">Assemble</span></div>
-              <div class="pipeline-ticket" data-ticket></div>
-            </div>
-            <div class="demo-metric-tiles">
-              <div class="demo-metric-tile"><b data-count-to="8">0</b><span>Synthetic data types</span></div>
-              <div class="demo-metric-tile"><b data-count-to="6">0</b><span>Specialised AI agents</span></div>
-            </div>
-            <div class="mini-chart" aria-hidden="true">
-              <div class="mini-chart-bars">
-                <span style="--d:0s"></span>
-                <span style="--d:0.15s"></span>
-                <span style="--d:0.3s"></span>
-                <span style="--d:0.45s"></span>
-                <span style="--d:0.6s"></span>
-                <span style="--d:0.75s"></span>
-              </div>
-              <svg class="mini-chart-line" viewBox="0 0 120 30" preserveAspectRatio="none">
-                <path d="M0,22 L15,18 L30,24 L45,10 L60,16 L75,6 L90,12 L105,4 L120,9" fill="none"/>
-              </svg>
-            </div>
+        <div class="app-mock app-mock-testgen">
+          <div class="app-mock-stats-row">
+            <div><b data-count-to="482">0</b><span>Test Cases</span></div>
+            <div><b data-count-to="1206">0</b><span>Scripts Generated</span></div>
+            <div><b data-count-to="97">0</b><span>Data Sets</span></div>
           </div>
-          <div class="demo-panel">
-            <div class="demo-log" data-demo-log='[
-              "Testing inputs uploaded",
-              "[Scope] Identifying in-scope technologies & components",
-              "[Discover] Mapping boundaries, dependencies & data flows",
-              "[Observe] Analysing runtime logs, where provided",
-              "[Generate] Generating test cases, synthetic data & scripts",
-              "[Assemble] Building traceability & coverage reports",
-              "✓ Autonomous run complete"
-            ]'></div>
+          <div class="app-mock-node-map">
+            <div class="app-mock-node"><b>Auth</b><span>Covered</span></div>
+            <div class="app-mock-node"><b>Checkout</b><span>Covered</span></div>
+            <div class="app-mock-node"><b>API</b><span>Covered</span></div>
+            <div class="app-mock-node"><b>Billing</b><span>Covered</span></div>
+            <div class="app-mock-node"><b>Search</b><span>Covered</span></div>
+            <div class="app-mock-node"><b>Notifications</b><span>Covered</span></div>
+            <div class="app-mock-node"><b>Admin</b><span>Covered</span></div>
+            <div class="app-mock-node"><b>Mobile</b><span>Covered</span></div>
+          </div>
+          <div class="app-mock-activity">
+            <div class="app-mock-activity-head">Live Activity</div>
+            <div class="demo-log" data-demo-log='["Generated 14 new test cases for Checkout module", "Running regression suite against staging build", "Flagged 1 flaky test in Notifications", "✓ Coverage report published"]'></div>
           </div>
         </div>
       </div>
@@ -179,6 +156,24 @@
     </div>
   </div>
 </section>
+
+<!-- ============ SCROLLING TEXT MARQUEE ============ -->
+<div class="text-marquee" aria-hidden="true">
+  <div class="text-marquee-track">
+    <div class="text-marquee-group">
+      <span>Autonomous QA</span><span class="accent">·</span>
+      <span>Headless Testing</span><span class="accent">·</span>
+      <span>Release With Confidence</span><span class="accent">·</span>
+      <span>Pulse</span><span class="accent">·</span>
+    </div>
+    <div class="text-marquee-group">
+      <span>Autonomous QA</span><span class="accent">·</span>
+      <span>Headless Testing</span><span class="accent">·</span>
+      <span>Release With Confidence</span><span class="accent">·</span>
+      <span>Pulse</span><span class="accent">·</span>
+    </div>
+  </div>
+</div>
 
 <!-- ============ STANDOUT QUALITIES ============ -->
 <section class="standout-section" id="overview">

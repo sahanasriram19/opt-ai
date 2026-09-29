@@ -93,46 +93,47 @@
         </div>
       </div>
 
-      <!-- Live demo panel: laptop/browser chrome, personalised to Forge — a request
-           moving across the 6 specialist roles with a human-approval gate, plus a
-           live commit-style log of what each role is doing. -->
+      <!-- Real product screenshot: the Forge specialist-agent team workspace -->
       <div class="demo-window">
         <div class="demo-titlebar">
           <span class="demo-dot red"></span><span class="demo-dot yellow"></span><span class="demo-dot green"></span>
-          <span class="demo-url">app.optimum.ai</span>
+          <span class="demo-url">team.optimum.ai</span>
           <span class="demo-live-dot" title="Live"></span>
         </div>
-        <div class="demo-body">
-          <div class="demo-panel pipeline-panel">
-            <div class="pipeline-request">Request: <b>&ldquo;Add SSO login to customer portal&rdquo;</b></div>
-            <div class="pipeline-track" data-pipeline data-gate-index="3">
-              <div class="pipeline-line"></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></span><span class="node-label">BA</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span><span class="node-label">Architect</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span><span class="node-label">Developer</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="node-label">Reviewer</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><span class="node-label">QA</span></div>
-              <div class="pipeline-node"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></span><span class="node-label">Release</span></div>
-              <div class="pipeline-ticket" data-ticket></div>
+        <div class="app-mock">
+          <div class="app-mock-sidebar">
+            <div class="app-mock-sidebar-head">Agent Team</div>
+            <div class="app-mock-agent active">
+              <span class="avatar">BA</span>
+              <div><b>Business Analyst</b><small>Drafting requirements</small></div>
             </div>
-            <div class="pipeline-gate-note" data-gate-note>⏸ Human approval required before merge</div>
-            <div class="demo-metric-tiles">
-              <div class="demo-metric-tile"><b data-count-to="6">0</b><span>Specialist roles</span></div>
-              <div class="demo-metric-tile"><b data-count-to="3">0</b><span>Human checkpoints</span></div>
+            <div class="app-mock-agent">
+              <span class="avatar">AR</span>
+              <div><b>Architect</b><small>Idle</small></div>
+            </div>
+            <div class="app-mock-agent">
+              <span class="avatar">DV</span>
+              <div><b>Developer</b><small>Idle</small></div>
+            </div>
+            <div class="app-mock-agent">
+              <span class="avatar">CR</span>
+              <div><b>Code Reviewer</b><small>Idle</small></div>
+            </div>
+            <div class="app-mock-agent">
+              <span class="avatar">QA</span>
+              <div><b>QA Engineer</b><small>Idle</small></div>
+            </div>
+            <div class="app-mock-agent">
+              <span class="avatar">RM</span>
+              <div><b>Release Manager</b><small>Idle</small></div>
             </div>
           </div>
-          <div class="demo-panel">
-            <div class="demo-log" data-demo-log='[
-              "Requirement received: \"Add SSO login\"",
-              "[Business Analyst] Drafting user story + acceptance criteria",
-              "[Architect] Proposing solution design",
-              "[Developer] Implementing change",
-              "[Code Reviewer] Checking standards, security & maintainability",
-              "Human approval required before merge",
-              "[QA] Running delivery-level validation checks",
-              "[Release] Preparing deployment",
-              "✓ Released — human-approved"
-            ]'></div>
+          <div class="app-mock-chat-panel">
+            <div class="app-mock-chat-head">Business Analyst <small>· requirements-refinement</small></div>
+            <div class="app-mock-chat-body">
+              <div class="demo-log" data-demo-log='["Reviewing ticket OPT-1042: add multi-tenant export", "Clarified acceptance criteria with 3 edge cases", "Drafted requirements doc for Architect review", "✓ Handing off to Architect agent"]'></div>
+            </div>
+            <div class="app-mock-chat-input">Ask the team anything…</div>
           </div>
         </div>
       </div>
@@ -164,6 +165,26 @@
     </div>
   </div>
 </section>
+
+<!-- ============ SCROLLING TEXT MARQUEE ============ -->
+<div class="text-marquee" aria-hidden="true">
+  <div class="text-marquee-track">
+    <div class="text-marquee-group">
+      <span>Specialist Agents</span><span class="accent">·</span>
+      <span>Shared Context</span><span class="accent">·</span>
+      <span>Structured Skills</span><span class="accent">·</span>
+      <span>Human Control</span><span class="accent">·</span>
+      <span>Forge</span><span class="accent">·</span>
+    </div>
+    <div class="text-marquee-group">
+      <span>Specialist Agents</span><span class="accent">·</span>
+      <span>Shared Context</span><span class="accent">·</span>
+      <span>Structured Skills</span><span class="accent">·</span>
+      <span>Human Control</span><span class="accent">·</span>
+      <span>Forge</span><span class="accent">·</span>
+    </div>
+  </div>
+</div>
 
 <!-- ============ STANDOUT QUALITIES ============ -->
 <section class="standout-section" id="overview">

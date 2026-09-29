@@ -94,49 +94,44 @@
         </div>
       </div>
 
-      <!-- Live Agent Lifecycle carousel — accurate to the AI Studio platform diagram -->
-      <div class="lifecycle-window"
-           data-lifecycle='[
-             {"title":"Build","body":"Create and configure skills, agents and capabilities."},
-             {"title":"Govern","body":"Apply policies, guardrails, permissions and approval workflows."},
-             {"title":"Run","body":"Deploy agents with controls for safe and trusted execution."},
-             {"title":"Observe","body":"Monitor performance, usage, quality and outcomes."},
-             {"title":"Improve","body":"Evaluate, learn and continuously optimize agents and skills."}
-           ]'>
-        <svg class="lifecycle-network" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M40,120 C120,40 160,140 200,80 S320,20 360,60" fill="none" stroke-width="1.5"/>
-          <circle class="network-node" cx="40" cy="120" r="4"/>
-          <circle class="network-node" cx="140" cy="70" r="3"/>
-          <circle class="network-node" cx="240" cy="95" r="4"/>
-          <circle class="network-node" cx="360" cy="60" r="3"/>
-          <circle class="network-dot" r="3">
-            <animateMotion dur="5s" repeatCount="indefinite" path="M40,120 C120,40 160,140 200,80 S320,20 360,60"/>
-          </circle>
-        </svg>
-        <div class="lifecycle-label">Agent Lifecycle</div>
-        <div class="lifecycle-steps">
-          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-          <span class="lifecycle-arrow">→</span>
-          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <span class="lifecycle-arrow">→</span>
-          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg></div>
-          <span class="lifecycle-arrow">→</span>
-          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 4-8"/></svg></div>
-          <span class="lifecycle-arrow">→</span>
-          <div class="lifecycle-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3.5-7.1"/><path d="M21 3v6h-6"/></svg></div>
+      <!-- Real product screenshot: the AI Studio governance control tower -->
+      <div class="demo-window">
+        <div class="demo-titlebar">
+          <span class="demo-dot red"></span><span class="demo-dot yellow"></span><span class="demo-dot green"></span>
+          <span class="demo-url">studio.optimum.ai</span>
+          <span class="demo-live-dot" title="Live"></span>
         </div>
-        <div class="lifecycle-step-labels">
-          <span>Build</span><span></span><span>Govern</span><span></span><span>Run</span><span></span><span>Observe</span><span></span><span>Improve</span>
-        </div>
-        <div class="lifecycle-detail">
-          <div class="lifecycle-detail-icon"></div>
-          <div>
-            <h4></h4>
-            <p></p>
+        <div class="app-mock app-mock-dashboard">
+          <div class="app-mock-kpi-row">
+            <div class="kpi-tile"><span>Total Requests</span><b data-count-to="31864">0</b></div>
+            <div class="kpi-tile"><span>Risk Alerts</span><b data-count-to="24">0</b></div>
+            <div class="kpi-tile"><span>Active Models</span><b data-count-to="14">0</b></div>
+            <div class="kpi-tile"><span>Policy Compliance</span><b data-count-to="96" data-suffix="%">0</b></div>
           </div>
-        </div>
-        <div class="lifecycle-dots">
-          <span></span><span></span><span></span><span></span><span></span>
+          <div class="app-mock-charts-row">
+            <div class="app-mock-linechart">
+              <div class="app-mock-linechart-head">Request Volume (7d)</div>
+              <svg viewBox="0 0 300 130" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="aistudioAreaFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--aistudio)" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="var(--aistudio)" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="area" d="M0,100 L40,86 L80,92 L120,60 L160,68 L200,40 L240,46 L300,18 L300,130 L0,130 Z"/>
+                <path class="line" d="M0,100 L40,86 L80,92 L120,60 L160,68 L200,40 L240,46 L300,18"/>
+              </svg>
+            </div>
+            <div class="app-mock-donut">
+              <div class="app-mock-donut-head">Policy Compliance</div>
+              <svg viewBox="0 0 120 120">
+                <circle class="app-mock-donut-ring-bg" cx="60" cy="60" r="50"/>
+                <circle class="app-mock-donut-ring" cx="60" cy="60" r="50"/>
+              </svg>
+              <div class="app-mock-donut-total">96.2%</div>
+              <div class="app-mock-donut-label">Compliant</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -167,6 +162,28 @@
     </div>
   </div>
 </section>
+
+<!-- ============ SCROLLING TEXT MARQUEE ============ -->
+<div class="text-marquee" aria-hidden="true">
+  <div class="text-marquee-track">
+    <div class="text-marquee-group">
+      <span>Build</span><span class="accent">·</span>
+      <span>Govern</span><span class="accent">·</span>
+      <span>Run</span><span class="accent">·</span>
+      <span>Observe</span><span class="accent">·</span>
+      <span>Improve</span><span class="accent">·</span>
+      <span>AI Studio</span><span class="accent">·</span>
+    </div>
+    <div class="text-marquee-group">
+      <span>Build</span><span class="accent">·</span>
+      <span>Govern</span><span class="accent">·</span>
+      <span>Run</span><span class="accent">·</span>
+      <span>Observe</span><span class="accent">·</span>
+      <span>Improve</span><span class="accent">·</span>
+      <span>AI Studio</span><span class="accent">·</span>
+    </div>
+  </div>
+</div>
 
 <!-- ============ STANDOUT QUALITIES ============ -->
 <section class="standout-section" id="overview">

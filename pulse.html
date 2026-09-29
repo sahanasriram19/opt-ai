@@ -78,6 +78,7 @@
 
 <!-- ============ HERO ============ -->
 <section class="product-hero theme-pulse">
+  <canvas class="particle-network-canvas" aria-hidden="true"></canvas>
   <div class="container">
     <div class="product-hero-grid">
       <div>
@@ -122,6 +123,19 @@
             <div class="demo-metric-tiles">
               <div class="demo-metric-tile"><b data-count-to="8">0</b><span>Synthetic data types</span></div>
               <div class="demo-metric-tile"><b data-count-to="6">0</b><span>Specialised AI agents</span></div>
+            </div>
+            <div class="mini-chart" aria-hidden="true">
+              <div class="mini-chart-bars">
+                <span style="--d:0s"></span>
+                <span style="--d:0.15s"></span>
+                <span style="--d:0.3s"></span>
+                <span style="--d:0.45s"></span>
+                <span style="--d:0.6s"></span>
+                <span style="--d:0.75s"></span>
+              </div>
+              <svg class="mini-chart-line" viewBox="0 0 120 30" preserveAspectRatio="none">
+                <path d="M0,22 L15,18 L30,24 L45,10 L60,16 L75,6 L90,12 L105,4 L120,9" fill="none"/>
+              </svg>
             </div>
           </div>
           <div class="demo-panel">

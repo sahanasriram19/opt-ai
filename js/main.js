@@ -337,4 +337,180 @@ document.addEventListener("DOMContentLoaded", function () {
     animateCounters();
     setInterval(animateCounters, 2400);
   }
+
+  /* ---------- Interactive particle-network canvas (hero backgrounds) ---------- */
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion) {
+    document.querySelectorAll(".hero-home, .product-hero").forEach(function (section) {
+      var canvas = section.querySelector(".particle-network-canvas");
+      if (!canvas || !canvas.getContext) return;
+      var ctx = canvas.getContext("2d");
+      var dpr = window.devicePixelRatio || 1;
+      var w = 0, h = 0, nodes = [];
+      var mouse = { x: null, y: null };
+
+      function resize() {
+        w = section.clientWidth;
+        h = section.clientHeight;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + "px";
+        canvas.style.height = h + "px";
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function initNodes() {
+        var count = Math.max(16, Math.min(42, Math.floor((w * h) / 26000)));
+        nodes = [];
+        for (var i = 0; i < count; i++) {
+          nodes.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.25,
+            vy: (Math.random() - 0.5) * 0.25
+          });
+        }
+      }
+
+      function step() {
+        ctx.clearRect(0, 0, w, h);
+        nodes.forEach(function (n) {
+          n.x += n.vx;
+          n.y += n.vy;
+          if (n.x < 0 || n.x > w) n.vx *= -1;
+          if (n.y < 0 || n.y > h) n.vy *= -1;
+        });
+        for (var i = 0; i < nodes.length; i++) {
+          for (var j = i + 1; j < nodes.length; j++) {
+            var dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 130) {
+              ctx.strokeStyle = "rgba(255,255,255," + (0.14 * (1 - dist / 130)) + ")";
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.stroke();
+            }
+          }
+          if (mouse.x !== null) {
+            var mdx = nodes[i].x - mouse.x, mdy = nodes[i].y - mouse.y;
+            var mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+            if (mdist < 150) {
+              ctx.strokeStyle = "rgba(255,255,255," + (0.4 * (1 - mdist / 150)) + ")";
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(mouse.x, mouse.y);
+              ctx.stroke();
+            }
+          }
+        }
+        ctx.fillStyle = "rgba(255,255,255,0.6)";
+        nodes.forEach(function (n) {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, 1.6, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        requestAnimationFrame(step);
+      }
+
+      resize();
+      initNodes();
+      window.addEventListener("resize", function () {
+        resize();
+        initNodes();
+      });
+      section.addEventListener("mousemove", function (e) {
+        var rect = section.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      });
+      section.addEventListener("mouseleave", function () {
+        mouse.x = null;
+        mouse.y = null;
+      });
+      requestAnimationFrame(step);
+    });
+  }
+
+  /* ---------- 3D tilt on cards (adds to the existing cursor-glow mousemove) ---------- */
+  glowEls.forEach(function (el) {
+    el.addEventListener("mousemove", function (e) {
+      var rect = el.getBoundingClientRect();
+      var rawX = e.clientX - rect.left;
+      var rawY = e.clientY - rect.top;
+      var rotateY = ((rawX - rect.width / 2) / (rect.width / 2)) * 6;
+      var rotateX = -((rawY - rect.height / 2) / (rect.height / 2)) * 6;
+      el.style.transform = "perspective(700px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg) translateY(-2px)";
+    });
+    el.addEventListener("mouseleave", function () {
+      el.style.transform = "";
+    });
+  });
+
+  /* ---------- Scroll-built diagram: CohesionX AI Decision Record ---------- */
+  var drwFlow = document.querySelector(".drw-flow");
+  if (drwFlow && "IntersectionObserver" in window) {
+    var drwFlowObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("built");
+            drwFlowObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    drwFlowObserver.observe(drwFlow);
+  }
+
+  /* ---------- Scroll-built diagram: connecting line through workflow step numbers ---------- */
+  document.querySelectorAll(".workflow-rows").forEach(function (rows) {
+    var nums = rows.querySelectorAll(".step-num");
+    if (nums.length < 2 || window.innerWidth < 800) return;
+    var svgNS = "http://www.w3.org/2000/svg";
+    var svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("class", "workflow-connector");
+    var path = document.createElementNS(svgNS, "path");
+    svg.appendChild(path);
+    rows.style.position = "relative";
+    rows.insertBefore(svg, rows.firstChild);
+
+    function layout() {
+      var contRect = rows.getBoundingClientRect();
+      svg.setAttribute("width", contRect.width);
+      svg.setAttribute("height", contRect.height);
+      var points = [];
+      nums.forEach(function (n) {
+        var r = n.getBoundingClientRect();
+        points.push((r.left - contRect.left + r.width / 2) + "," + (r.top - contRect.top + r.height / 2));
+      });
+      path.setAttribute("d", "M" + points.join(" L"));
+      var len = path.getTotalLength();
+      path.style.strokeDasharray = len;
+      if (!path.dataset.drawn) path.style.strokeDashoffset = len;
+    }
+    layout();
+    window.addEventListener("resize", layout);
+
+    if ("IntersectionObserver" in window) {
+      var connectorObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              path.style.strokeDashoffset = 0;
+              path.dataset.drawn = "true";
+              connectorObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      connectorObserver.observe(rows);
+    } else {
+      path.style.strokeDashoffset = 0;
+    }
+  });
 });

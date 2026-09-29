@@ -107,25 +107,39 @@
           <span class="demo-live-dot" title="Live"></span>
         </div>
         <div class="app-mock app-mock-testgen">
-          <div class="app-mock-stats-row">
-            <div><b data-count-to="482">0</b><span>Test Cases</span></div>
-            <div><b data-count-to="1206">0</b><span>Scripts Generated</span></div>
-            <div><b data-count-to="97">0</b><span>Data Sets</span></div>
+          <div class="tg-topbar">
+            <span class="tg-logo">◆</span>
+            <b>OPTIMUM TEST GENERATOR</b>
+            <span class="tg-project">LiteLLM Test 1 <i>▾</i></span>
           </div>
-          <div class="app-mock-node-map">
-            <div class="app-mock-node"><b>Auth</b><span>Covered</span></div>
-            <div class="app-mock-node"><b>Checkout</b><span>Covered</span></div>
-            <div class="app-mock-node"><b>API</b><span>Covered</span></div>
-            <div class="app-mock-node"><b>Billing</b><span>Covered</span></div>
-            <div class="app-mock-node"><b>Search</b><span>Covered</span></div>
-            <div class="app-mock-node"><b>Notifications</b><span>Covered</span></div>
-            <div class="app-mock-node"><b>Admin</b><span>Covered</span></div>
-            <div class="app-mock-node"><b>Mobile</b><span>Covered</span></div>
+          <div class="tg-toolbar">
+            <div class="tg-stats">
+              <div><b data-count-to="52761">0</b><span>Cases</span></div>
+              <div><b data-count-to="2102">0</b><span>Scripts</span></div>
+              <div><b data-count-to="52761">0</b><span>Data</span></div>
+            </div>
+            <div class="tg-tabs">
+              <span class="active">Map</span><span>Assets</span><span>Docs</span>
+            </div>
           </div>
-          <div class="app-mock-activity">
-            <div class="app-mock-activity-head">Live Activity</div>
-            <div class="demo-log" data-demo-log='["Generated 14 new test cases for Checkout module", "Running regression suite against staging build", "Flagged 1 flaky test in Notifications", "✓ Coverage report published"]'></div>
+          <div class="tg-body">
+            <div class="tg-nodemap">
+              <div class="tg-node"><small class="count-above">2 Tests</small><i class="box"></i><span class="label"><b>1</b>Vector Stores &amp; RAG</span></div>
+              <div class="tg-node"><small class="count-above">99 Tests</small><i class="box"></i><span class="label"><b>5</b>Organization &amp; Project</span></div>
+              <div class="tg-node"><small class="count-above">1283 Tests</small><i class="box"></i><span class="label"><b>34</b>Model Routing &amp; LB</span></div>
+              <div class="tg-node"><small class="count-above">2 Tests</small><i class="box"></i><span class="label"><b>1</b>Prompt Management</span></div>
+              <div class="tg-node"><small class="count-above">27384 Tests</small><i class="box"></i><span class="label"><b>906</b>Chat Completions</span></div>
+              <div class="tg-node"><small class="count-above">605 Tests</small><i class="box"></i><span class="label"><b>26</b>Admin Console</span></div>
+              <div class="tg-node"><small class="count-above">18912 Tests</small><i class="box"></i><span class="label"><b>260</b>Library / System</span></div>
+              <div class="tg-node"><small class="count-above">915 Tests</small><i class="box"></i><span class="label"><b>60</b>Observability</span></div>
+              <div class="tg-node"><small class="count-above">976 Tests</small><i class="box"></i><span class="label"><b>20</b>Agent &amp; Tool Orch.</span></div>
+            </div>
+            <div class="tg-activity">
+              <div class="tg-activity-head"><span class="tg-dot"></span>Complete <b>100%</b></div>
+              <div class="demo-log" data-demo-log='["Assemble — logic coverage 37% (60735 decision points)", "Assemble — test quality report persisted to Docs library", "Assemble — run completed; Forge Run Summary ready", "✓ Run complete — 1391 boundaries, 52761 test cases"]'></div>
+            </div>
           </div>
+          <div class="tg-cta">⚡ Forge Test Suite</div>
         </div>
       </div>
     </div>

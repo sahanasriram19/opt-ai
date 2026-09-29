@@ -4,11 +4,30 @@
    individual AI product pages (Forge, Pulse, AI Studio, CohesionX)
    ========================================================= */
 
-/* Scrolling text marquee banner — bold looping tagline strip */
+/* Scrolling text marquee banner — two bold looping tagline strips,
+   each set on its own diagonal and crossing over one another like an X,
+   clipped to a fixed-height band so the crossing point stays on-page. */
+.text-marquee-cross {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: var(--white);
+}
 .text-marquee {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180vw;
   overflow: hidden;
   background: var(--ink);
   padding: 18px 0;
+}
+.text-marquee.band-a { transform: translate(-50%, -50%) rotate(-7deg); z-index: 2; }
+.text-marquee.band-b {
+  transform: translate(-50%, -50%) rotate(7deg);
+  z-index: 1;
+  background: #000;
+  opacity: 0.92;
 }
 .text-marquee-track {
   display: flex;
@@ -16,6 +35,7 @@
   gap: 40px;
   animation: marqueeLeft 24s linear infinite;
 }
+.text-marquee-track.reverse { animation-name: marqueeRight; }
 .text-marquee:hover .text-marquee-track { animation-play-state: paused; }
 .text-marquee-group { display: flex; gap: 40px; flex: none; }
 .text-marquee span {
@@ -32,6 +52,10 @@ body.aistudio-page .text-marquee span.accent { color: var(--aistudio); }
 body.cohesionx-page .text-marquee span.accent { color: var(--cohesionx); }
 @media (prefers-reduced-motion: reduce) {
   .text-marquee-track { animation: none; }
+}
+@media (max-width: 640px) {
+  .text-marquee-cross { height: 190px; }
+  .text-marquee span { font-size: 17px; }
 }
 
 :root {
@@ -1511,6 +1535,9 @@ body.cohesionx-page .page-tab-indicator { background: var(--cohesionx); }
 
 /* Integrations */
 .integrations-section { background: var(--gray-100); padding: 80px 0; }
+/* Where the crossing marquee sits right above Integrations (Pulse, AI Studio,
+   CohesionX), keep it on white too so there's no hard seam under the strips. */
+.text-marquee-cross + .integrations-section { background: var(--white); }
 .integration-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
